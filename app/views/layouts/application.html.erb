@@ -4,12 +4,17 @@
     <title>FramgiaIMusicSystem</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
   </head>
-
-  <body>
-    <%= yield %>
+  <body class="sticky-header left-side-collapsed"  onload="initMap()">
+    <section>
+      <%= render "layouts/leftside" %>
+      <%= render "layouts/header" %>
+      <%= yield %>
+      <%= render "layouts/footer" %>
+      </div>
+    </section>
   </body>
 </html>
