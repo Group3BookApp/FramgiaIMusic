@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t ".title" %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "admin", media: "all",
+      "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "admin/admin", "data-turbolinks-track": "reload" %>
+  </head>
+  <body class="dark-edition">
+    <div class="wrapper ">
+      <div class="sidebar" data-color="purple" data-background-color="black">
+        <div class="logo">
+          <%= link_to t(".head_title"), "", class: "simple-text logo-normal"  %>
+        </div>
+        <div class="sidebar-wrapper">
+          <ul class="nav">
+            <li class="nav-item active">
+              <%= link_to "#", class: "nav-link" do %>
+                <i class="material-icons"><%= t ".icon_dashboard" %></i>
+                <p><%= t ".dashboard" %></p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to admin_users_path, class: "nav-link" do %>
+                <i class="material-icons"><%= t ".icon_person" %></i>
+                <p><%= t ".manage_user" %></p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "#", class: "nav-link" do %>
+                <i class="material-icons"><%= t ".icon_person" %></i>
+                <p><%= t ".manage_artist" %></p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "#", class: "nav-link" do %>
+                <i class="material-icons"><%= t ".icon_content_paste" %></i>
+                <p><%= t ".manage_category" %></p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "#", class: "nav-link" do %>
+                <i class="material-icons"><%= t ".icon_content_paste" %></i>
+                <p><%= t ".manage_album" %></p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "#", class: "nav-link" do %>
+                <i class="material-icons"><%= t ".icon_library_books" %></i>
+                <p><%= t ".manage_music" %></p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "#", class: "nav-link" do %>
+                <i class="material-icons"><%= t ".icon_library_books" %></i>
+                <p><%= t ".manage_lyrics" %></p>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-panel">
+        <div class="content">
+          <div class="container-fluid">
+            <%= yield %>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="copyright float-right">
+              <%= t ".made_with" %>
+              <i class="material-icons"><%= t ".favorite" %></i>
+              by <%= link_to t(".t3"), "" %> <%= t ".better" %>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
