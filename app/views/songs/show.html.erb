@@ -1,0 +1,22 @@
+<div id="page-wrapper">
+  <div class="inner-content single">
+    <div class="tittle-head">
+      <h3 class="tittle"><%= t ".title_cate" %> <span class="new"><%= t ".cate_sub" %></span></h3>
+      <div class="clearfix"> </div>
+    </div>
+    <div class="single_left">
+      <div class="video-main">
+        <div class="video-record-list">
+          <div id="jp_container_1" class="jp-video jp-video-270p" role="application"
+          aria-label="media player">
+            <div class="jp-type-playlist">
+              <h4><%= @song.name %></h4>
+              <%= audio_tag @song.data.url, controls: true %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+</div>
