@@ -13,4 +13,3 @@
 //= require responsiveslides.min
 //= require scripts
 //= require uisearch
-

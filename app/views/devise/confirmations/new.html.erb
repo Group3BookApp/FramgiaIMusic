@@ -1,0 +1,13 @@
+<div class="forgot_password">
+  <h2><%= t ".resend_confirm" %></h2>
+  <%= simple_form_for resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post } do |f| %>
+    <%= devise_error_messages! %>
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",
+      value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+    <%= f.button t(".resend_confirm") %>
+    <%- if devise_mapping.recoverable? && controller_name != "passwords" && controller_name != "registrations" %>
+      <%= link_to t(".forgot_password"), new_password_path(resource_name) %>
+    <% end -%>
+  <% end %>
+</div>

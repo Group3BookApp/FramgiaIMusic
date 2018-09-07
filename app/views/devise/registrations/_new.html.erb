@@ -1,0 +1,55 @@
+<div class="modal fade" id="myModal5" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-info">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"
+          aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body modal-spa">
+        <div class="sign-grids">
+          <div class="sign">
+            <div class="sign-left">
+              <ul>
+                <li><a class="fb" href="#"><i></i>
+                  <%= t ".sign_in_with_facebook" %>
+                </a></li>
+                <li><a class="goog" href="#">
+                  <i></i><%= t ".sign_in_with_google" %>
+                </a></li>
+                <li><a class="linkin" href="#">
+                  <i></i><%= t ".sign_in_with_linkedin" %>
+                </a></li>
+              </ul>
+            </div>
+            <div class="sign-right">
+              <h3><%= t ".create_your_account" %></h3>
+              <%= simple_form_for resource, as: resource_name, url: registration_path(resource_name) do |f| %>
+                <%= devise_error_messages! %>
+                <%= f.label :email %>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                <%= f.label :password %>
+                <% if @minimum_password_length %>
+                  <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %>
+                <%= f.password_field :password, autocomplete: "new-password" %>
+                <%= f.label :password_confirmation %>
+                <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+                <div class="actions">
+                  <%= f.submit t ".create_account" %>
+                </div>
+              <% end %>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <p>
+            <%= t ".bylogiingin" %><span><%= t ".terms" %></span>
+            <%= t ".and" %> <span><%= t ".privacy" %></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

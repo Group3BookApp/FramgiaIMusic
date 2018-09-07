@@ -4,4 +4,6 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
+//= require custom
+//= require frontend
+//= require show_artist

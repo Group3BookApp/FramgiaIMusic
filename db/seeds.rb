@@ -5,8 +5,6 @@
     description: description
 end
 
-
-
 20.times do |n|
   name = FFaker::Music.artist
   description = FFaker::Lorem.sentences
