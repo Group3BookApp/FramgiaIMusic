@@ -69,3 +69,14 @@ en:
       phone: "Phone:   00-250-2131"
       email: "Email :"
       info: "info(at)mailing.com"
+  artists:
+    artist:
+      featured_albums: "Featured Albums"
+      new : "New"
+      read_more: "Read More"
+    info_artist:
+      new: New
+      artist: Artist
+      see_all: See All
+      show: "Show"
+      albums: "Albums"

@@ -13,3 +13,12 @@ end
     data: data,
     category_id: category_id
 end
+
+20.times do |n| 
+  name = FFaker::Music.artist
+  description = FFaker::Lorem.sentences
+  avatar = FFaker::Image.url
+  Artist.create! name: name,
+    description: description,
+    avatar: avatar
+end
