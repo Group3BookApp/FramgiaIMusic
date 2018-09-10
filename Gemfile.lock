@@ -73,6 +73,10 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    carrierwave-audio (1.0.9)
+      carrierwave (>= 0.10.0)
+      ruby-sox (>= 0.0.3)
+      soxi-wrapper (>= 0.0.1)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     chromedriver-helper (1.2.0)
@@ -224,6 +228,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    ruby-sox (0.0.3)
     ruby_dep (1.5.0)
     rubyzip (1.2.2)
     sass (3.5.7)
@@ -243,6 +248,10 @@ GEM
     selenium-webdriver (3.14.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    simple_form (4.0.1)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
+    soxi-wrapper (0.0.2)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -289,6 +298,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   carrierwave (= 1.2.2)
+  carrierwave-audio
   chromedriver-helper
   coffee-rails (~> 4.2)
   config
@@ -308,6 +318,7 @@ DEPENDENCIES
   ransack
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3

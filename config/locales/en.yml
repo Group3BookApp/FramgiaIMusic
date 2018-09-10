@@ -3,6 +3,10 @@ en:
     admin:
       index:
         welcome: "Welcome to Framgia IMusic Admin"
+    songs:
+      new:
+        enter_name: "Enter name song..."
+        add: "ADD"
   layouts:
     admin:
       admin:

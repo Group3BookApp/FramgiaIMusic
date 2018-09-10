@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :songs, only: :index
   namespace :admin do
     resources :admin, only: :index
+    resources :songs
   end
   resources :artists
 end
