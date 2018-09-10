@@ -1,3 +1,4 @@
+//= require jquery
 //= require js/core/jquery.min.js
 //= require js/core/popper.min.js
 //= require js/core/bootstrap-material-design.min.js

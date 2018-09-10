@@ -1,12 +1,12 @@
-<div class="header-section">
-  <%= link_to "", class: "toggle-btn  menu-collapsed" do %>
-    <i class="fa fa-bars"></i>
-  <% end %>
-  <div class="menu-right">
-    <div class="profile_details">
-      <%= render "layouts/search" %>
-      <%= render "layouts/player" %>
-    </div>
+<%= link_to "", class: "toggle-btn menu-collapsed" do %>
+  <i class="fa fa-bars"></i>
+<% end %>
+<div class="menu-right">
+  <div class="profile_details">
+    <%= render "layouts/search" %>
+    <%= render "layouts/player" %>
+    <%= render "devise/sessions/new" %>
+    <div class="clearfix"> </div>
   </div>
-  <div class="clearfix"></div>
 </div>
+<div class="clearfix"></div>
