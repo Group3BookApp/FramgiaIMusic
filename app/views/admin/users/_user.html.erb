@@ -1,0 +1,11 @@
+<tr>
+  <td><%= image_tag user.avatar.url, size: Settings.size_avatar %></td>
+  <td><%= user.name %></td>
+  <td><%= user.email %></td>
+  <td>
+    <%# if !user.admin? && !current_user?(user) %>
+    <%= link_to t(".delete"), admin_user_path(user), method: :delete,
+      class: "btn btn-sm btn-danger", data: {confirm: t(".you_sure")} %>
+    <%# end %>
+  </td>
+</tr>

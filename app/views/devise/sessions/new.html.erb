@@ -1,0 +1,37 @@
+<% if user_signed_in? %>
+  <div class="img_avatar">
+    <%= link_to user_path do %>
+      <%= image_tag current_user.avatar.url, alt: "avatar", class: "avatar" %>
+    <% end %>
+  </div>
+<% else %>
+  <div class="col-md-4 login-pop">
+    <div id="loginpop">
+      <div id="loginBox">
+        <div id="loginForm">
+          <%= simple_form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
+            <%= field_set_tag nil, id: "body" do %>
+              <%= field_set_tag do %>
+                <%= f.label :email %>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+              <% end %>
+              <%= field_set_tag do %>
+                <%= f.label :password %>
+                <%= f.password_field :password, autocomplete: "current-password" %>
+              <% end %>
+              <%= f.submit t(".login"), id: "login" %>
+              <% if devise_mapping.rememberable? -%>
+                <%= f.check_box :remember_me, class: "checkbox" %>
+                <%= f.label :remember_me %>
+              <% end -%>
+            <% end %>
+              <%- if devise_mapping.recoverable? && controller_name != "passwords" &&
+                controller_name != "registrations" %>
+                <span><%= link_to t(".forgot_password"), new_password_path(resource_name) %></span>
+              <% end -%>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

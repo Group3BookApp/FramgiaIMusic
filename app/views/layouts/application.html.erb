@@ -8,11 +8,19 @@
   <body class="sticky-header left-side-collapsed"  onload="initMap()">
     <section>
       <%= render "layouts/leftside" %>
-      <%= render "layouts/header" %>
+      <%= render "layouts/signup" %>
+      <%= render "devise/registrations/new" %>
       <div class="main-content">
+        <div class="header-section">
+          <%= render "layouts/header" %>
+        </div>
         <div id="page-wrapper">
           <div class="inner-content">
-            <%= yield %>
+            <div class="music-left">
+              <p class="notice"><%= notice %></p>
+              <p class="alert"><%= alert %></p>
+              <%= yield %>
+            </div>
             <div class="clearfix"></div>
           </div>
         </div>

@@ -7,6 +7,17 @@ en:
       new:
         enter_name: "Enter name song..."
         add: "ADD"
+    users:
+      index:
+        manage_users: "Manage Users"
+        not_admin: "The page you were looking for doesn't exist (404)"
+      user:
+        delete: "Delete"
+        you_sure: "You definitely want to delete!!!"
+      destroy:
+        deleted: "User deleted"
+      load_user:
+        no_user: "No user"
   layouts:
     admin:
       admin:
@@ -73,6 +84,12 @@ en:
       phone: "Phone:   00-250-2131"
       email: "Email :"
       info: "info(at)mailing.com"
+    header:
+      sign_in: "Sign In"
+    signup:
+      mosaic_your_smartphone: "Mosaic mobile app on your smartphone!"
+      download: "Download and Avail Special Songs Videos and Audios."
+      get_app: "Gets the app from"
   artists:
     artist:
       featured_albums: "Featured Albums"
@@ -84,3 +101,92 @@ en:
       see_all: See All
       show: "Show"
       albums: "Albums"
+  static_pages:
+    home:
+      you_sure: "Are you sure?"
+      sign_up: "Sign Up"
+      sign_in: "Sign In"
+      logout: "Logout"
+      signed_in_as: "Signed in as"
+      sign_in_with_google: "Sign in with Google"
+  devise:
+    sessions:
+      new:
+        forgot_password: "Forgot your password?"
+        login: "Log in"
+    registrations:
+      new:
+        create_account: "CREATE ACCOUNT"
+        bylogiingin: "By logging in you agree to our "
+        terms: "Terms and Conditions"
+        and: "and"
+        privacy: "Privacy Policy"
+        create_your_account: "Create your account "
+        sign_in_with_facebook: "Sign in with Facebook"
+        sign_in_with_google: "Sign in with Google"
+        sign_in_with_linkedin: "Sign in with Linkedin"
+      edit:
+        edit: "Edit"
+        cancel_my_account: "Cancel my account"
+        unhappy: "Unhappy?"
+        update: "Update"
+        are_you_sure: "Are you sure?"
+        current_password_confirm: "(we need your current password to confirm your changes)"
+        back: "Back"
+        waiting_confirm: "Currently waiting confirmation for: "
+        characters_minimum: "characters minimum"
+        leave_blank: "(leave blank if you don't want to change it)"
+    passwords:
+      new:
+        forgot_password: "Forgot your password?"
+        didnt_receive: "Didn't receive confirmation instructions?"
+        send_me_reset_password: "Send me reset password instructions"
+      edit:
+        change_password: "Change your password"
+        new_password: "New password"
+        confirm_new_password: "Confirm new password"
+        change_my_password: "Change my password"
+    confirmations:
+      new:
+        resend_confirm: "Resend confirmation instructions"
+        forgot_password: "Forgot your password?"
+    shared:
+      links:
+        login: "Log in"
+        signup: "Sign up"
+        forgot_password: "Forgot your password?"
+        didnt_receive: "Didn't receive confirmation instructions?"
+        didnt_receive_unlock: "Didn't receive unlock instructions?"
+    mailer:
+      email_changed:
+        hello: "Hello"
+        content_email: "We're contacting you to notify you that your email is being changed to "
+      confirmation_instructions:
+        welcome: "Welcome"
+        you_can_confirm: "You can confirm your account email through the link below:"
+        confirm_my_account: "Confirm my account"
+      password_change:
+        hello: "Hello"
+        contact_you: "We're contacting you to notify you that your password has been changed."
+      reset_password_instructions:
+        hello: "Hello"
+        link_change_your_password: "Someone has requested a link to change your password. You can do this through the link below."
+        change_my_password: "Change my password"
+        please_ignore: "If you didn't request this, please ignore this email."
+        access_link_above: "Your password won't change until you access the link above and create a new one."
+      unlock_instructions:
+        hello: "Hello"
+        your_account_locked: "Your account has been locked due to an excessive number of unsuccessful sign in attempts."
+        click_link: "Click the link below to unlock your account:"
+        unlock_my_account: "Unlock my account"
+    unlocks:
+      new:
+        resend_unlock: "Resend unlock instructions"
+  users:
+    edit:
+      edit_profile: "Editing Profile"
+      logout: "Log out"
+    show:
+      logout: "Log out"
+    update:
+      profile_update: "Profile was successfully updated."

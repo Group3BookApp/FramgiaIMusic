@@ -1,0 +1,12 @@
+<div>
+  <% if user_signed_in? %>
+    <%= t ".signed_in_as" %><strong><%= current_user.name || current_user.email %></strong>.
+    <%= link_to "Show", user_path %>
+    <%= link_to 'Edit Password', edit_user_registration_path %>
+    <%= link_to "Edit profile", edit_user_path %>
+    <%= link_to t(".logout"), destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to t(".sign_in"), new_user_session_path %>
+    <%= link_to t(".sign_in_with_google"), "auth/google_oauth2", id: "sign_in" %>
+  <% end %>
+</div>
