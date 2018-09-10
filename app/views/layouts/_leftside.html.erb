@@ -19,8 +19,11 @@
           <span><%= t ".apps" %></span>
         <% end %>
       </li>
-      <li><a href="#"><i class="lnr lnr-users"></i>
-        <span><%= t ".artists" %></span></a>
+      <li>
+        <%= link_to artists_path, class: "hover_menu_left_x" do %>
+          <i class="lnr lnr-users"></i>
+          <div class="hover_menu_left_0"><%= t ".artists" %></div>
+        <% end %>
       </li>
       <li>
         <%= link_to songs_path, class: "hover_menu_left_x" do %>
