@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2018_09_10_055209) do
   create_table "albums", force: :cascade do |t|
     t.string "name"
     t.text "description"
+    t.string "avatar"
     t.integer "artist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -25,8 +26,10 @@ ActiveRecord::Schema.define(version: 2018_09_10_055209) do
     t.string "name"
     t.string "avatar"
     t.text "description"
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_artists_on_category_id"
   end
 
   create_table "authors", force: :cascade do |t|
@@ -48,7 +51,6 @@ ActiveRecord::Schema.define(version: 2018_09_10_055209) do
     t.string "name"
     t.string "data"
     t.integer "listening"
-    t.integer "album_id"
     t.integer "category_id"
     t.integer "author_id"
     t.integer "album_id"

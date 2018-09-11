@@ -1,20 +1,21 @@
-<div class="container review-slider">
+<div class="review-slider">
   <div class="tittle-head">
     <h3 class="tittle"><%= t(".featured_albums") %><span class="new"><%= t(".new") %></span></h3>
-    <div class="clearfix"> </div>
+    <div class="clearfix"></div>
   </div>
   <ul id="flexiselDemo1">
-    <%= @artists.each do |artist| %>
+    <% @artist_song.each do |artist| %>
       <li>
-      <a href="single.html"><%= link_to image_tag "soobin1.jpg", alt: "" %></a>
-      <div class="slide-title"><h4><%= artist.name %></div>
-      <div class="date-city">
-        <div class="buy-tickets">
-          <a href="single.html"><%= t ".read_more" %></a>
-        </div>
-      </div>
+	    <a href="single.html"><%= link_to image_tag "soobin1.jpg", alt: "" %></a>
+	    <div class="slide-title"><h4><%= artist.name %></div>
+	    <div class="date-city">
+	      <div class="buy-tickets">
+	        <a href="single.html"><%= t ".read_more" %></a>
+	      </div>
+	    </div>
       </li>
-    <% end %>
+    <% end %> 
   </ul>
 </div>
 <div class="clearfix"></div>
+</div>
