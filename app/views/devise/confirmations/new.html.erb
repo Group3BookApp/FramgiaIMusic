@@ -5,7 +5,7 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email",
       value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
-    <%= f.button t(".resend_confirm") %>
+    <%= f.submit t(".resend_confirm"), class: "btn btn-lg btn-success" %>
     <%- if devise_mapping.recoverable? && controller_name != "passwords" && controller_name != "registrations" %>
       <%= link_to t(".forgot_password"), new_password_path(resource_name) %>
     <% end -%>

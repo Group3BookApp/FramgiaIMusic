@@ -1,0 +1,57 @@
+<div class="container bg-blue">
+  <div class="row profile">
+    <div class="col-md-3">
+      <div class="profile-sidebar">
+        <div class="profile-userpic">
+          <%= image_tag @user.avatar.url, alt: "", class: "img-responsive" %>
+        </div>
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name">
+            <%= @user.name %>
+          </div>
+          <div class="profile-usertitle-job">
+            <%= t ".developer" %>
+          </div>
+          <div><%= @user.email %></div>
+        </div>
+        <div class="profile-userbuttons">
+          <button type="button" class="btn btn-success btn-sm">
+            <%= t ".follow" %></button>
+          <button type="button" class="btn btn-danger btn-sm">
+            <%= t ".message" %></button>
+        </div>
+        <div class="profile-usermenu">
+          <ul class="nav">
+            <li class="">
+              <a href="#">
+              <i class="glyphicon glyphicon-home"></i>
+              <%= t ".overview" %></a>
+            </li>
+            <li>
+              <%= link_to edit_user_path do %>
+                <i class="glyphicon glyphicon-user"></i>
+                <%= t ".account_settings" %>
+              <% end %>
+            </li>
+            <li>
+              <a href="#">
+              <i class="glyphicon glyphicon-flag"></i>
+              <%= t ".help" %></a>
+            </li>
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="glyphicon glyphicon-flag"></i>
+                <%= t ".logout" %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="profile-content">
+        <%= t ".some_user" %>
+      </div>
+    </div>
+  </div>
+</div>

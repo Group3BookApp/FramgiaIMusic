@@ -16,9 +16,11 @@
                 <li><a class="fb" href="#"><i></i>
                   <%= t ".sign_in_with_facebook" %>
                 </a></li>
-                <li><a class="goog" href="#">
-                  <i></i><%= t ".sign_in_with_google" %>
-                </a></li>
+                <li>
+                  <%= link_to users_auth_google_oauth2_path, id: "sign_in", class: "goog" do %>
+                    <i></i><%= t ".sign_in_with_google" %>
+                  <% end %>
+                </li>
                 <li><a class="linkin" href="#">
                   <i></i><%= t ".sign_in_with_linkedin" %>
                 </a></li>

@@ -1,0 +1,83 @@
+<div class="container bg-blue">
+  <div class="row profile">
+    <div class="col-md-3">
+      <div class="profile-sidebar">
+        <div class="profile-userpic">
+          <%= image_tag @user.avatar.url, alt: "", class: "img-responsive" %>
+        </div>
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name">
+            <%= @user.name %>
+          </div>
+          <div class="profile-usertitle-job">
+            <%= t ".developer" %>
+          </div>
+          <div><%= @user.email %></div>
+        </div>
+        <div class="profile-userbuttons">
+          <button type="button" class="btn btn-success btn-sm">
+            <%= t ".follow" %></button>
+          <button type="button" class="btn btn-danger btn-sm">
+            <%= t ".message" %></button>
+        </div>
+        <div class="profile-usermenu">
+          <ul class="nav">
+            <li class="active">
+              <a href="#">
+              <i class="glyphicon glyphicon-home"></i>
+              <%= t ".overview" %></a>
+            </li>
+            <li>
+              <%= link_to edit_user_path do %>
+                <i class="glyphicon glyphicon-user"></i>
+                <%= t ".account_settings" %>
+              <% end %>
+            </li>
+            <li>
+              <a href="#">
+              <i class="glyphicon glyphicon-flag"></i>
+              <%= t ".help" %></a>
+            </li>
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="glyphicon glyphicon-flag"></i>
+                <%= t ".logout" %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="profile-content">
+        <div class="forgot_password">
+          <h3><%= t ".edit_profile" %></h3>
+          <%= simple_form_for @user do |f| %>
+            <% if @user.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@user.errors.count, "error") %>
+                  <%= t ".prohibited_idea" %></h2>
+                <ul>
+                  <% @user.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+            <div class="field">
+              <%= f.label :name %><br>
+              <%= f.text_field :name %>
+            </div>
+            <div class="field">
+              <%= f.label :avatar %><br>
+              <%= f.file_field :avatar %>
+            </div>
+            <div class="actions"><br>
+              <%= f.submit class: "btn btn-success" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

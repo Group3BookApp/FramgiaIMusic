@@ -27,6 +27,8 @@ gem "mini_magick", "4.7.0"
 gem "carrierwave-audio"
 gem "ransack"
 gem "devise"
+gem "omniauth"
+gem "omniauth-google-oauth2", "<=1.0.3"
 gem "simple_form"
 
 group :development, :test do

@@ -5,13 +5,14 @@ class SessionsController < Devise::SessionsController
   end
 
   def create
-    @referer_url = root_path
-    super
+    user = User.from_omniauth(env["omniauth.auth"])
+    session[:user_id] = user.id
+    redirect_to root_path
   end
 
   def destroy
-    @referer_url = root_path
-    super
+    session[:user_id] = nil
+    redirect_to root_path
   end
 
   private

@@ -10,7 +10,7 @@
     <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
     <%= f.label :password_confirmation, t(".confirm_new_password") %>
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    <%= f.button t ".change_my_password" %>
+    <%= f.submit t(".change_my_password"), class: "btn btn-lg btn-success" %>
     <%- if devise_mapping.confirmable? && controller_name != "confirmations" %>
       <%= link_to t(".didnt_receive"), new_confirmation_path(resource_name) %>
     <% end -%>
