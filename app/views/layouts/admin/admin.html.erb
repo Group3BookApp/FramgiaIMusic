@@ -11,12 +11,13 @@
     <div class="wrapper ">
       <div class="sidebar" data-color="purple" data-background-color="black">
         <div class="logo">
-          <%= link_to t(".head_title"), "", class: "simple-text logo-normal"  %>
+          <%= link_to t(".head_title"), admin_admin_index_path,
+            class: "simple-text logo-normal"  %>
         </div>
         <div class="sidebar-wrapper">
           <ul class="nav">
             <li class="nav-item">
-              <%= link_to "#", class: "nav-link" do %>
+              <%= link_to admin_admin_index_path, class: "nav-link" do %>
                 <i class="material-icons"><%= t ".icon_dashboard" %></i>
                 <p><%= t ".dashboard" %></p>
               <% end %>
@@ -28,9 +29,15 @@
               <% end %>
             </li>
             <li class="nav-item">
-              <%= link_to "#", class: "nav-link" do %>
+              <%= link_to admin_artists_path, class: "nav-link" do %>
                 <i class="material-icons"><%= t ".icon_person" %></i>
                 <p><%= t ".manage_artist" %></p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "", class: "nav-link" do %>
+                <i class="material-icons"><%= t ".icon_person" %></i>
+                <p><%= t ".manage_author" %></p>
               <% end %>
             </li>
             <li class="nav-item">
@@ -61,6 +68,36 @@
         </div>
       </div>
       <div class="main-panel">
+        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-wrapper">
+              <div>
+                <% flash.each do |message_type, message| %>
+                  <div class="alert alert-<%= message_type %>">
+                    <%= message %>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <div>
+                    <%= image_tag current_user.avatar.url, class: "avt_admin_header" %>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <div class="administrator">
+                    <table>
+                      <tr><td><%= current_user.name %></td></tr>
+                      <tr><td><%= t ".administrator" %></td></tr>
+                    </table>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
         <div class="content">
           <div class="container-fluid">
             <%= yield %>

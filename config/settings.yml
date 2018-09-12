@@ -2,4 +2,6 @@ length_name: 100
 length_description: 500
 per_page: 5
 page_artist: 5
-size_avatar: 100
+size_avatar: 90
+size_avatar_edit: 200
+truncate_description: 100

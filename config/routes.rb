@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :admin, only: :index
     resources :songs
     resources :users, only: %i(index destroy)
+    resources :artists
   end
   resources :artists
 end
