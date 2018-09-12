@@ -5,7 +5,7 @@
     <%= render "layouts/rails_default" %>
     <%= render "layouts/shim" %>
   </head>
-  <body class="sticky-header left-side-collapsed"  onload="initMap()">
+  <body class="sticky-header left-side-collapsed" onload="initMap()">
     <section>
       <%= render "layouts/leftside" %>
       <%= render "layouts/signup" %>
@@ -14,7 +14,7 @@
         <div class="header-section">
           <%= render "layouts/header" %>
         </div>
-        <div class="inner-content">
+        <div class="container inner-content">
           <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
             <%= yield %>

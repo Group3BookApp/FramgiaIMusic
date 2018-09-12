@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-plain">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title mt-0"><%= t ".manage_lyrics" %></h4>
+        <p class="card-category"><%= t ".sub_lyrics" %></p>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <%= render "new" %>
+          <%#= render "search" %>
+          <%= paginate @lyrics %>
+          <table class="table table-hover">
+            <thead>
+              <th class="width_name">
+                <%= sort_link @search, :name, t(".name") %>
+              </th>
+              <th class="width_description">
+                <%= sort_link @search, :content, t(".content") %>
+              </th>
+              <th>albums</th>
+              <th>songs</th>
+              <th class="width_head_action"><%= t ".action" %></th>
+            </thead>
+          </table>
+          <%= render "not_found" %>
+          <%= render "lyric" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

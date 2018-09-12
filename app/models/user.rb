@@ -3,7 +3,9 @@ class User < ApplicationRecord
     :recoverable, :rememberable, :trackable, :validatable, :confirmable,
     :omniauthable, :omniauth_providers => [:google_oauth2]
 
+  has_many :lyrics, dependent: :destroy
   mount_uploader :avatar, PictureUploader
+  scope :by_name_user, -> {order :name}
 
   def self.from_omniauth(access_token)
     data = access_token.info

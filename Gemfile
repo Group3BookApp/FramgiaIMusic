@@ -31,6 +31,7 @@ gem "omniauth-google-oauth2", "<=1.0.3"
 gem "simple_form"
 gem "sprockets-rails", :require => "sprockets/railtie"
 gem "friendly_id", "~> 5.2.0"
+gem "ckeditor"
 
 group :development, :test do
   gem "sqlite3"

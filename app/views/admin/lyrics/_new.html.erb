@@ -1,0 +1,12 @@
+<%= simple_form_for :song do |f| %>
+  <%= f.input :content, input_html: {value: ""}, placeholder:
+    t(".enter_content") %>
+  <%= f.check_box :status, {}, true, false %>
+  <h3><%= t ".select_song" %></h3>
+  <%= f.collection_select :song_id, @song_name, :id, :name,
+    include_blank: false %>
+  <h3><%= t ".select_user" %></h3>
+  <%= f.collection_select :user_id, @user_name, :id, :name,
+    include_blank: false %>
+  <%= f.button :submit, t(".new"), class: "btn btn-primary" %>
+<% end %>

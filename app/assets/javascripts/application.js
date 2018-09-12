@@ -6,3 +6,4 @@
 //= require custom
 //= require frontend
 //= require show_artist
+//= require ckeditor/init

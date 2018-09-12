@@ -1,0 +1,15 @@
+<h2><%= t ".search_lyric" %></h2>
+<%= search_form_for [:admin, @search], class: "form-inline" do |f| %>
+  <div class="form-group">
+    <%= f.label :content_cont, t(".s_name"),class: "space2" %>
+    <%= f.text_field :content_cont, class: "form-control",
+      placeholder: t(".enter_s_name") %>
+  </div>
+  <div class="form-group">
+    <%= f.label :user_cont, t('.s_description'),class: "space2" %>
+    <%= f.text_field :user_cont, class: "form-control",
+      placeholder: t(".enter_s_description") %>
+  </div>
+    <%= f.submit t(".search"), class: "btn btn-primary" %>
+    <%= link_to t(".refresh"), admin_lyrics_path, class: "btn btn-info" %>
+<% end %>

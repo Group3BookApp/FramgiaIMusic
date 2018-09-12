@@ -7,6 +7,9 @@ class SongsController < ApplicationController
 
   def show
     @song.increase_listening
+    if @song.lyrics.present?
+      @song_lyrics = @song.lyrics.all
+    end
   end
 
   private

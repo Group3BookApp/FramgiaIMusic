@@ -1,7 +1,7 @@
 <h2><%= t ".search_artist" %></h2>
 <%= search_form_for [:admin, @search], class: "form-inline" do |f| %>
   <div class="form-group">
-    <%= f.label :name_cont, t(".s_name"),class: "space2" %>
+    <%= f.label :name_cont, t(".s_name"), class: "space2" %>
     <%= f.text_field :name_cont, class: "form-control",
       placeholder: t(".enter_s_name") %>
   </div>

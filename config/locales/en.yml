@@ -14,6 +14,10 @@ en:
         select_cate: "Select category:"
         avatar: "Avatar:"
         data: "Data (*.mp3):"
+      create:
+        created: "Created"
+        createfail: "Create failed"
+    users:
       index:
         manage_songs: "Manage Songs"
         sub_songs: "List songs"
@@ -245,6 +249,26 @@ en:
         new: "ADD"
       create:
         created: "Author created"
+    lyrics:
+      new:
+        new: "New Lyric"
+        new_lyric: "New Lyric"
+        enter_content: "Enter new content"
+        enter_song_name: "Enter new name of song"
+      lyric:
+        view: "New"
+        edit: "Edit"
+        delete: "Delete"
+        you_sure: "You definitely want to delete!!!"
+      create:
+        created: "Lyric created"
+        createfail: "Lyric didn't create"
+      update:
+        update: "Lyric updated"
+      destroy:
+        deleted: "Lyric deleted"
+        delete_fail: "Lyric didn't delete"
+      not_found: "Not found"
   layouts:
     admin:
       admin:
@@ -456,3 +480,7 @@ en:
   songs:
     show:
       listening: "Listening:"
+      lyric: "Lyric"
+    index:
+      new: "New"
+      list_music: "List music"

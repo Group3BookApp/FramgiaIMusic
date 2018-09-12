@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_10_055209) do
+ActiveRecord::Schema.define(version: 2018_09_12_154640) do
 
   create_table "albums", force: :cascade do |t|
     t.string "name"
@@ -43,6 +43,17 @@ ActiveRecord::Schema.define(version: 2018_09_10_055209) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "lyrics", force: :cascade do |t|
+    t.text "content"
+    t.integer "song_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "status", default: false
+    t.index ["song_id"], name: "index_lyrics_on_song_id"
+    t.index ["user_id"], name: "index_lyrics_on_user_id"
   end
 
   create_table "songs", force: :cascade do |t|

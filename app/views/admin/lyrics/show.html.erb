@@ -1,0 +1,23 @@
+<div class="card card-plain">
+  <div class="dark-edition">
+    <div class="card-header card-header-primary">
+      <h4 class="modal-title"><%= t ".view_lyric" %></h4>
+    </div><br>
+    <div class="modal-body">
+      <div class="card card-profile">
+        <div class="card-avatar">
+          <%= image_tag @lyric.avatar.url,size: Settings.size_avatar %>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title"><%= @lyric.name %></h4>
+          <p class="card-description"><%= @lyric.description %></p>
+        </div>
+      </div>
+    </div>
+    <%= link_to t(".backhome"), admin_lyrics_path, class: "btn btn-info" %>
+    <%= link_to t(".edit"), edit_admin_lyric_path(@lyric),
+      class: "width_a btn btn-warning" %>
+    <%= link_to t(".delete"), admin_lyric_path(@lyric), method: :delete,
+      class: "width_a btn btn-danger", data: {confirm: t(".you_sure")} %>
+  </div>
+</div>

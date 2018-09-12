@@ -3,11 +3,13 @@ class Song < ApplicationRecord
   belongs_to :artist
   belongs_to :author
   belongs_to :category
+  has_many :lyrics, dependent: :destroy
   scope :by_order, -> {order created_at: :desc}
   scope :select_song, -> {
     select :id, :avatar, :name, :data, :listening, :album_id,
       :artist_id, :author_id, :category_id
   }
+  scope :by_name_song, -> {order :name}
   mount_uploader :avatar, PictureUploader
   mount_uploader :data, AudioUploader
   validates :artist_id, presence: true

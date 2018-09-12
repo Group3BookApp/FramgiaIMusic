@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root "static_pages#home"
   resources :categories, only: :index
-  resources :songs, only: %i(index show)
+  resources :songs, only: %i(index show) do
+    resources :lyrics
+  end
   devise_for :users, controllers: {omniauth_callbacks:
     "users/omniauth_callbacks"}
   get "users/auth/google_oauth2", to: "sessions#create"
@@ -16,7 +18,10 @@ Rails.application.routes.draw do
     resources :authors
     resources :categories
     resources :albums
+    resources :lyrics
   end
   resources :artists
+  resources :lyrics
+  mount Ckeditor::Engine => "/ckeditor"
 end
 

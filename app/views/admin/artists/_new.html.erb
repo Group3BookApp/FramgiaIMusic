@@ -1,5 +1,5 @@
 <%= simple_form_for :artist do |f| %>
- <h2><%= t ".new_artist" %></h2>
+  <h2><%= t ".new_artist" %></h2>
   <%= f.input :name, input_html: {value: ""}, placeholder: t(".enter_name") %>
   <%= f.input :description, input_html: {value: ""}, placeholder: t(".enter_description") %>
   <%= f.file_field :avatar %>
