@@ -1,0 +1,24 @@
+<% @categories.each do |category| %>
+  <table id="table" class="table table-hover">
+    <tbody>
+      <tr>
+        <td class="width_avatar">
+          <%= image_tag category.avatar.url, size: Settings.size_avatar %>
+        </td>
+        <td class="width_name"><%= category.name %></td>
+        <td class="width_description">
+          <%= truncate category.description, length: Settings.truncate_description %>
+        </td>
+        <td class="width_name"><%= category.songs.count %></td>
+        <td class="width_action">
+          <%= link_to t(".view"), admin_category_path(category),
+            class: "width_a btn btn-info btn-sm" %>
+          <%= link_to t(".edit"), edit_admin_category_path(category),
+            class: "width_a btn btn-warning btn-sm" %>
+          <%= link_to t(".delete"), admin_category_path(category), method: :delete,
+            class: "width_a btn btn-danger btn-sm", data: {confirm: t(".you_sure")} %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>

@@ -1,0 +1,6 @@
+<%= simple_form_for :category do |f| %>
+  <%= f.input :name, input_html: {value: ""}, placeholder: t(".enter_name") %>
+  <%= f.input :description, input_html: {value: ""}, placeholder: t(".enter_description") %>
+  <%= f.file_field :avatar %>
+  <%= f.button :submit, t(".new"), class: "btn btn-primary" %>
+<% end %>
