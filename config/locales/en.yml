@@ -5,7 +5,8 @@ en:
         welcome: "Welcome to Framgia IMusic Admin"
     songs:
       new:
-        enter_name: "Enter name song..."
+        enter_name: "Enter new name..."
+        enter_listening: "Enter listening..."
         add: "ADD"
         select_author: "Select author:"
         select_album: "Select album:"
@@ -55,6 +56,14 @@ en:
         category: "Change category:"
         data: "Change data(*.mp3):"
         avatar: "Change avatar:"
+      create:
+        createfail: "Cant create song"
+        created: "Song created"
+      song:
+        you_sure: "You definitely want to delete!!!"
+      destroy:
+        deleted: "Song deleted"
+        pls_check: "Cant delete. "
     artists:
       index:
         manage_artists: "Manage Artists"
@@ -97,6 +106,49 @@ en:
       destroy:
         deleted: "Artist deleted"
         pls_check: "Cant delate. Artists have albums or songs"
+    authors:
+      index:
+        manage_author: "Manage Author"
+        sub_author: "List authors"
+        new: "New author"
+        refresh: "Refresh"
+        avatar: "Avatar"
+        name: "Name"
+        description: "Description"
+        song_count: "Song count"
+        action: "Action"
+        new_author: "New Author"
+      authors:
+        view: "View"
+        delete: "Delete"
+        edit: "Edit"
+        you_sure: "You definitely want to delete!!!"
+      destroy:
+        deleted: "Author deleted"
+        delete_fail: "Cant delete song"
+      search:
+        search_author: "Search author"
+        s_name: "Name:"
+        enter_s_name: "Search name...."
+        s_description: "Description:"
+        enter_s_description: "Search description..."
+        search: "Search!"
+      show:
+        view_author: "View Author"
+        backhome: "<<Back"
+        delete: "Delete"
+        edit: "Edit"
+      edit:
+        edit_authors: "Edit Author"
+        enter_name_edit: "Change name you want..."
+        enter_des_edit: "Change description you want..."
+        backhome: "<<Back"
+      new:
+        enter_name: "Enter new name..."
+        enter_description: "Enter new description..."
+        new: "ADD"
+      create:
+        created: "Author created"
   layouts:
     admin:
       admin:

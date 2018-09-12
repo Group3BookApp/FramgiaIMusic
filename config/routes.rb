@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :songs
     resources :users, only: %i(index destroy)
     resources :artists
+    resources :authors
   end
   resources :artists
 end
