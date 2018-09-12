@@ -13,12 +13,16 @@ User.create! name: "Admin_system1",
 end
 
 20.times do |n|
+  name = FFaker::Music.album
+  description = FFaker::Lorem.paragraph
+  Artist.create! name: name, description: description
+end
+
+20.times do
   name = FFaker::Music.artist
-  description = FFaker::Lorem.sentences
-  avatar = FFaker::Image.url
-  Artist.create! name: name,
-    description: description,
-    avatar: avatar
+  description = FFaker::Lorem.paragraph
+  artist_id = rand 1..20
+  Album.create! name: name, description: description, artist_id: artist_id
 end
 
 User.create! name: "Admin_system",

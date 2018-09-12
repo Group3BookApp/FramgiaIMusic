@@ -7,3 +7,5 @@
 //= require js/plugins/bootstrap-notify.js
 //= require js/material-dashboard.js
 //= require demo/demo.js
+//= require jquery
+//= require rails-ujs

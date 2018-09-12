@@ -22,6 +22,48 @@ en:
         deleted: "User deleted"
       load_user:
         not_found: "Not found"
+    artists:
+      index:
+        manage_artists: "Manage Artists"
+        sub_artists: "List Artists"
+        avatar: "Avatar"
+        name: "Name"
+        description: "Description"
+        action: "Action"
+      show:
+        backhome: "<< Back"
+        view_artist: "View Artist"
+        edit: "Edit"
+        delete: "Delete"
+      edit:
+        backhome: "<< Back"
+        enter_need_edit: "Enter name you want...."
+        enter_des_edit: "Enter description you want...."
+      artists:
+        view: "View"
+        edit: "Edit"
+        delete: "Delete"
+        you_sure: "You definitely want to delete!!!"
+      new:
+        enter_name: "Enter new name artist..."
+        enter_description: "Enter new description..."
+        new: "New Artist"
+        new_artist: "New Artist"
+      search:
+        s_name: "Name: "
+        enter_s_name: "Enter search name...."
+        s_description: "Description:"
+        enter_s_description: "Enter search description...."
+        search: "Search!"
+        search_artist: "Search Artist"
+        refresh: "Refresh"
+      created: "Artist created"
+      createfail: "Artist no create"
+      update:
+        updated: "Artist updated"
+      destroy:
+        deleted: "Artist deleted"
+        pls_check: "Cant delate. Artists have albums or songs"
   layouts:
     admin:
       admin:
@@ -32,6 +74,7 @@ en:
         manage_user: "Manage Users"
         icon_person: "person"
         manage_artist: "Manage Artists"
+        manage_author: "Manage Author"
         manage_category: "Manage Categories"
         icon_content_paste: "content_paste"
         manage_album: "Manage Albums"
@@ -42,6 +85,8 @@ en:
         favorite: "favorite"
         t3: "Team 3 Framgia Open Education"
         better: "for a better web."
+        welcome: "Welcome to Framgia IMusic Admin"
+        administrator: "Administrator"
     application:
       base_title: "Framgia IMusic"
     leftside:
