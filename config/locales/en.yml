@@ -7,21 +7,54 @@ en:
       new:
         enter_name: "Enter name song..."
         add: "ADD"
-    users:
+        select_author: "Select author:"
+        select_album: "Select album:"
+        select_artist: "Select artist:"
+        select_cate: "Select category:"
+        avatar: "Avatar:"
+        data: "Data (*.mp3):"
       index:
-        manage_users: "Manage Users"
-        not_admin: "The page you were looking for doesn't exist (404)"
+        manage_songs: "Manage Songs"
+        sub_songs: "List songs"
         avatar: "Avatar"
         name: "Name"
-        email: "Email"
+        artist: "Artist"
+        author: "Author"
+        category: "Category"
+        album: "Album"
+        listening: "Listening"
         action: "Action"
-      user:
-        delete: "Delete"
-        you_sure: "You definitely want to delete!!!"
-      destroy:
-        deleted: "User deleted"
-      load_user:
-        not_found: "Not found"
+        new: "New Song"
+        refresh: 'Refresh'
+      search:
+        search_song: "Search song"
+        s_name: "Name:"
+        enter_s_name: "Search name song..."
+        s_artist: "Artist:"
+        enter_s_name_artist: "Search name artist..."
+        s_author: "Author:"
+        enter_s_name_author: "Search name author..."
+        s_category: "Category:"
+        enter_s_name_category: "Search name category..."
+        s_album: "Album:"
+        enter_s_name_album: "Search name album..."
+        search: "Search song!"
+      show:
+        view_song: "View Song"
+        author: "Author:"
+        category: "Category:"
+        artist: "Artist:"
+        album: "Album:"
+        listening: "Listening:"
+      edit:
+        edit_song: "Edit song"
+        enter_name: "Enter name you want..."
+        author: "Change author:"
+        album: "Change album: "
+        artist: "Change artist:"
+        category: "Change category:"
+        data: "Change data(*.mp3):"
+        avatar: "Change avatar:"
     artists:
       index:
         manage_artists: "Manage Artists"
@@ -258,3 +291,20 @@ en:
       some_user: "Some user related content goes here..."
     update:
       profile_update: "Profile was successfully updated."
+    index:
+      manage_users: "Manage Users"
+      not_admin: "The page you were looking for doesn't exist (404)"
+      avatar: "Avatar"
+      name: "Name"
+      email: "Email"
+      action: "Action"
+    user:
+      delete: "Delete"
+      you_sure: "You definitely want to delete!!!"
+    destroy:
+      deleted: "User deleted"
+    load_user:
+      not_found: "Not found"
+  songs:
+    show:
+      listening: "Listening:"
