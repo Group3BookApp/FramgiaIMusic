@@ -5,7 +5,9 @@ class SongsController < ApplicationController
     @songs = Song.select_song.page(params[:page]).by_order.per Settings.per_page
   end
 
-  def show; end
+  def show
+    @song.increase_listening
+  end
 
   private
 
