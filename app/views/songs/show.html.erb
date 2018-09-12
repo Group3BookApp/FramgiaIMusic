@@ -10,8 +10,9 @@
           <div id="jp_container_1" class="jp-video jp-video-270p" role="application"
           aria-label="media player">
             <div class="jp-type-playlist">
-              <h4><%= @song.name %></h4>
-              <%= audio_tag @song.data.url, controls: true %>
+              <h3><%= @song.name %></h3>
+              <h4><%= t ".listening" %><%= @song.listening %></h4>
+              <%= audio_tag @song.data.url, controls: true, autoplay: :true %>
             </div>
           </div>
         </div>

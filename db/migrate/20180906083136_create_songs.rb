@@ -4,6 +4,7 @@ class CreateSongs < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :avatar
       t.string :data
+      t.integer :listening
       t.references :album
       t.references :category
       t.references :artist

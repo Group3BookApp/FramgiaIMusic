@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2018_09_10_055209) do
     t.string "name"
     t.string "avatar"
     t.string "data"
+    t.integer "listening"
     t.integer "album_id"
     t.integer "category_id"
     t.integer "artist_id"
