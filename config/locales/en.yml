@@ -7,6 +7,21 @@ en:
       new:
         enter_name: "Enter name song..."
         add: "ADD"
+    users:
+      index:
+        manage_users: "Manage Users"
+        not_admin: "The page you were looking for doesn't exist (404)"
+        avatar: "Avatar"
+        name: "Name"
+        email: "Email"
+        action: "Action"
+      user:
+        delete: "Delete"
+        you_sure: "You definitely want to delete!!!"
+      destroy:
+        deleted: "User deleted"
+      load_user:
+        not_found: "Not found"
   layouts:
     admin:
       admin:
@@ -117,6 +132,7 @@ en:
         sign_in_with_facebook: "Sign in with Facebook"
         sign_in_with_google: "Sign in with Google"
         sign_in_with_linkedin: "Sign in with Linkedin"
+        characters_minimum: "characters minimum"
       edit:
         edit: "Edit"
         cancel_my_account: "Cancel my account"
