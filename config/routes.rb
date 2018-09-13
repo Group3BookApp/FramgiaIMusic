@@ -15,5 +15,6 @@ Rails.application.routes.draw do
     resources :artists
   end
   resources :artists
+  resources :albums
 end
 

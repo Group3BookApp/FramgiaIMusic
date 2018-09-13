@@ -1,0 +1,50 @@
+<div id="page-wrapper">
+  <div id = "album1">
+  </div>
+  <div id = "album2">
+    <div class="tittle-head">
+	    <h3 class="tittle"><%= t(".singer") %><span class="new"><%= t(".new") %></span></h3>
+	    <div class="clearfix"></div>
+	  </div>
+	  <div id="album3">
+	    <%= t(".icon") %><%= @song_album.artist.name %><%= t(".icon") %>
+	  </div>
+  </div>
+  <div id="album4">
+    <div class="tittle-head">
+	    <h3 class="tittle"><%= t(".info") %><span class="new"><%= t(".new") %></span></h3>
+	    <div class="clearfix"></div>
+	  </div>
+	  <div><h3><%= @song_album.description %></h3></div>
+  </div>
+  <div id="album5">
+    <div class="tittle-head">
+	    <h3 class="tittle"><%= t(".list") %><span class="new"><%= t(".new") %></span></h3>
+	    <div class="clearfix"></div>
+	  </div>
+	  <div class="video-main">
+	    <div class="video-record-list">
+		    <div id="jp_container_1" class="jp-video jp-video-270p" 
+		      role="application" aria-label="media player">
+			    <div class="jp-type-playlist">
+			      <div class="jp-playlist">
+				      <ul>
+				        <% @list_song.each do |song| %>
+					        <li class="jp-playlist-current" id="album_li">
+					          <div>
+					  	        <a href="javascript:;" class="jp-playlist-item-remove" id="album6">×</a>
+					  	        <a href="javascript:;" class="jp-playlist-item jp-playlist-current" 
+					  	          tabindex="0">
+	                    <%= song.name %><%= t("    .icon   ") %>
+					  	        </a>
+					          </div>
+					        </li>
+				        <% end %>
+				      </ul>
+			      </div>
+			    </div>
+		    </div>
+		  </div>
+	  </div>
+  </div>
+</div>

@@ -1,7 +1,11 @@
 length_name: 100
-length_description: 500
+length_description: 200
 per_page: 5
 page_artist: 5
 size_avatar: 90
 size_avatar_edit: 200
 truncate_description: 100
+page_album: 4
+email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+length_email: 255
+pw_min: 6

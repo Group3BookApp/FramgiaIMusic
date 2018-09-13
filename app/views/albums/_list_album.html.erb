@@ -1,0 +1,21 @@
+<div id="page-wrapper">
+  <div class="inner-content">
+    <div class="music-browse">
+	    <div class="browse">
+        <div class="tittle-head two">
+		      <h3 class="tittle"><%= t(".album") %><span class="new"><%= t(".new") %></span></h3>
+		      <a href="/artists/show"><h4 class="tittle third"><%= t(".see_all") %></h4></a>
+		      <div class="clearfix"></div>
+	      </div>
+        <% @song_album.each do|album| %>
+          <div class="col-md-3 browse-grid">
+            <%= link_to image_tag "soobin1.jpg", title: "allbum-name" %>
+            <a href="single.html"><i class="glyphicon glyphicon-play-circle"></i></a>
+            <a class="sing" href="/albums/show"><%= album.name %></a>
+          </div>
+        <% end %>
+	    </div>
+    </div>
+  </div> 
+  <%= paginate @song_album, theme: "twitter-bootstrap-3" %>
+</div>

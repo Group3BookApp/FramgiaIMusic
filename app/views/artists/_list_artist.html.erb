@@ -1,0 +1,38 @@
+<% @artist_song.each do |artist| %>
+  <div class="row carousel-row" id="info-artits">
+    <div class="col-xs-9 col-xs-offset-2 slide-row">
+      <div id="carousel-1" class="carousel slide slide-carousel" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-1" data-slide-to="1"></li>
+          <li data-target="#carousel-1" data-slide-to="2"></li>
+        </ol>        
+        <div class="carousel-inner">
+          <div class="item active">
+            <%= link_to image_tag("soobin1.jpg"), artist_path(artist),  alt: "allbum-name" %>
+          </div>
+          <div class="item">
+            <%= link_to image_tag("soobin1.jpg"), artist_path(artist), alt: "allbum-name" %>
+          </div>
+          <div class="item">
+            <%= link_to image_tag("soobin1.jpg"), artist_path(artist), alt: "allbum-name" %>
+          </div>
+        </div>
+      </div>
+      <div class="slide-content">
+        <h4><a class="sing"><%= link_to artist.name, artist_path(artist) %></a></h4>
+        <p><%= artist.description %></p>
+      </div>
+      <div class="slide-footer">
+        <span class="pull-right buttons">
+          <a><button class="btn btn-sm btn-default">
+            <i class="fa fa-fw fa-eye"></i>
+            <%= link_to t(".show"), artist_path(artist) %>
+          </button></a>
+          <a>
+        </span>
+      </div>
+    </div>
+  </div>
+<% end %>
+<div id="list_artist" ><%= paginate @artist_song, theme: "twitter-bootstrap-3" %></div>

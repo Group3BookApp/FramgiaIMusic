@@ -1,61 +1,11 @@
-<div class="container">
-  <div class="music-browse">
-    <div class="browse">
-      <div class="tittle-head two">
-        <h3 class="tittle">
-          <%= t(".artist") %><span class="new">
-          <%= t(".new") %></span>
-        </h3>
-        <%= link_to "/artists/show" do %>
-          <h4 class="tittle third">
-          <%= t(".see_all") %></h4>
-        <% end %>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-  </div>
-  <% @artists.each do |artist| %>
-    <div class="row carousel-row" id="info-artits">
-      <div class="col-xs-10 col-xs-offset-1 slide-row">
-        <div id="carousel-1" class="carousel slide slide-carousel"
-          data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-1" data-slide-to="1"></li>
-            <li data-target="#carousel-1" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="item active">
-              <%= link_to "" do %>
-                <%= image_tag "soobin1.jpg", title: "album-name" %>
-              <% end %>
-            </div>
-            <div class="item">
-              <%= link_to "" do %>
-                <%= image_tag "soobin1.jpg", title: "album-name" %>
-              <% end %>
-            </div>
-            <div class="item">
-              <%= link_to "" do %>
-                <%= image_tag "soobin1.jpg", title: "album-name" %>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class="slide-content">
-          <h4><a class="sing" href="single.html"><%= artist.name %></a></h4>
-          <p><%= artist.description %></p>
-        </div>
-        <div class="slide-footer">
-          <span class="pull-right buttons">
-            <button class="btn btn-sm btn-default">
-              <i class="fa fa-fw fa-eye"></i><%= t(".show") %></button>
-            <button class="btn btn-sm btn-primary">
-              <i class="fa fa-fw fa-music"></i><%= t(".albums") %></button>
-          </span>
-        </div>
-      </div>
-    </div>
-  <% end %>
-  <div id="info-page"><%= paginate @artists, theme: "twitter-bootstrap-3" %></div>
+<div id="menu">
+  <ul>
+    <% @category_artist.each do |category| %>
+      <li>
+        <%= link_to category.name, artists_path %>
+      </li>
+    <% end %>
+  </ul>
 </div>
+<div class="clearfix"></div>
+<%= render "artists/list_artist" %>

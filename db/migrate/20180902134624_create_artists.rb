@@ -4,6 +4,7 @@ class CreateArtists < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :avatar
       t.text :description
+      t.references :category, foreign_key: true
 
       t.timestamps
     end
