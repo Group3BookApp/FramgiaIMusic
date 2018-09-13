@@ -2,8 +2,8 @@
   <div class="col-md-12">
     <div class="card card-plain">
       <div class="card-header card-header-primary">
-        <h4 class="card-title mt-0"><%= t ".manage_songs" %></h4>
-        <p class="card-category"><%= t ".sub_songs" %></p>
+        <h4 class="card-title mt-0"><%= t ".manage_category" %></h4>
+        <p class="card-category"><%= t ".sub_category" %></p>
       </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -11,32 +11,28 @@
             <div><%= render "search" %></div>
             <div>
               <%= link_to t(".new"), "#", class: "btn btn-primary",
-                data: {toggle: "modal", target: "#new_song_id"} %>
-              <%= link_to t(".refresh"), admin_songs_path, class: "btn btn-info" %>
+                data: {toggle: "modal", target: "#new_category_id"} %>
+              <%= link_to t(".refresh"), admin_categories_path, class: "btn btn-info" %>
             </div>
           </div>
-          <%= paginate @songs %>
+          <%= paginate @categories %>
           <table id="table" class="table table-hover">
             <tbody>
               <tr>
-                <th class="width_avatar"><%= t ".avatar" %></th>
                 <th class="width_name"><%= sort_link @search, :name, t(".name") %></th>
-                <th class="width_name"><%= sort_link @search, :artist, t(".artist") %></th>
-                <th class="width_name"><%= sort_link @search, :author, t(".author") %></th>
-                <th class="width_name"><%= sort_link @search, :category, t(".category") %></th>
-                <th class="width_name"><%= sort_link @search, :album, t(".album") %></th>
-                <th class="width_name"><%= t ".listening" %></th>
+                <th class="width_description"><%= sort_link @search, :description, t(".description") %></th>
+                <th class="width_name"><%= t ".song_count" %></th>
                 <th class="width_head_action"><%= t ".action" %></th>
               </tr>
             </tbody>
           </table>
           <%= render "not_found" %>
-          <%= render "song" %>
-          <div id="new_song_id" class="modal fade" role="dialog">
+          <%= render "categories" %>
+          <div id="new_category_id" class="modal fade" role="dialog">
             <div class="modal-dialog">
               <div class="modal-content dark-edition">
                 <div class="modal-header">
-                  <h2 class="modal-title"><%= t ".new_song" %></h2>
+                  <h2 class="modal-title"><%= t ".new_category" %></h2>
                 </div>
                 <div class="modal-body">
                   <%= render "new" %>

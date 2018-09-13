@@ -1,8 +1,21 @@
-<h2><%= t ".new_song" %></h2>
 <%= simple_form_for :song do |f| %>
-  <h2><%= t ".new_song" %></h2>
   <%= f.input :name, input_html: {value: ""}, placeholder: t(".enter_name") %>
+  <%= f.input :listening, input_html: {value: ""}, placeholder: t(".enter_listening") %>
+  <h3><%= t ".select_author" %></h3>
+  <%= f.collection_select :author_id, @author_name, :id, :name,
+    include_blank: false %>
+  <h3><%= t ".select_album" %></h3>
+  <%= f.collection_select :album_id, @album_name, :id, :name,
+    include_blank: false %>
+  <h3><%= t ".select_artist" %></h3>
+  <%= f.collection_select :artist_id, @artist_name, :id, :name,
+    include_blank: false %>
+  <h3><%= t ".select_cate" %></h3>
+  <%= f.collection_select :category_id, @category_name, :id, :name,
+    include_blank: false %>
+  <h3><%= t ".avatar" %></h3>
   <%= f.file_field :avatar %>
+  <h3><%= t ".data" %></h3>
   <%= f.file_field :data %>
   <%= f.button :submit, t(".add"), class: "btn btn-primary" %>
 <% end %>

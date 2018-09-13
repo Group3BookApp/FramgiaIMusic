@@ -1,0 +1,25 @@
+<% @songs.each do |song| %>
+  <table id="table" class="table table-hover">
+    <tbody>
+      <tr>
+        <td class="width_avatar">
+          <%= image_tag song.avatar.url, size: Settings.size_avatar %>
+        </td>
+        <td class="width_name"><%= song.name %></td>
+        <td class="width_name"><%= song.artist.name %></td>
+        <td class="width_name"><%= song.author.name %></td>
+        <td class="width_name"><%= song.category.name %></td>
+        <td class="width_name"><%= song.album.name %></td>
+        <td class="width_name"><%= song.listening %></td>
+        <td class="width_action">
+          <%= link_to t(".view"), admin_song_path(song),
+            class: "width_a btn btn-info btn-sm" %>
+          <%= link_to t(".edit"), edit_admin_song_path(song),
+            class: "width_a btn btn-warning btn-sm" %>
+          <%= link_to t(".delete"), admin_song_path(song), method: :delete,
+            class: "width_a btn btn-danger btn-sm", data: {confirm: t(".you_sure")} %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>
