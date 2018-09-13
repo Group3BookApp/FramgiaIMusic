@@ -9,3 +9,4 @@ page_album: 4
 email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 length_email: 255
 pw_min: 6
+listening_o: 0

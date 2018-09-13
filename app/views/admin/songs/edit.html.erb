@@ -1,0 +1,31 @@
+<div class="card card-plain">
+  <div class="card-header card-header-primary">
+    <h4 class="card-title mt-0"><%= t ".edit_song" %></h4>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <%= simple_form_for [:admin, @song] do |f| %>
+        <%= f.input :name, placeholder: t(".enter_name") %>
+        <h3><%= t ".author" %></h3>
+        <%= f.collection_select :author_id, @author_name, :id, :name,
+          include_blank: false %>
+        <h3><%= t ".album" %></h3>
+        <%= f.collection_select :album_id, @album_name, :id, :name,
+          include_blank: true %>
+        <h3><%= t ".artist" %></h3>
+        <%= f.collection_select :artist_id, @artist_name, :id, :name,
+          include_blank: false %>
+        <h3><%= t ".category" %></h3>
+        <%= f.collection_select :category_id, @category_name, :id, :name,
+          include_blank: false %>
+        <h3><%= t ".data" %></h3>
+        <%= f.file_field :data %>
+        <h3><%= t ".avatar" %></h3>
+        <%= f.file_field :avatar %>
+        <%= image_tag @song.avatar.url, size: Settings.size_avatar %>
+        <%= f.button :submit, class: "btn btn-primary" %>
+        <%= link_to t(".backhome"), admin_songs_path, class: "btn btn-info" %>
+      <% end %>
+    </div>
+  </div>
+</div>

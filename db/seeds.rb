@@ -1,3 +1,10 @@
+User.create! name: "Admin_system1",
+  email: "adminsystem1@gmail.com",
+  password: "111111",
+  password_confirmation: "111111",
+  confirmed_at: "2018-09-11 03:03:56.865473",
+  admin: true
+
 20.times do
   name = FFaker::Music.genre
   description = FFaker::Book.description sentence_count = 3
@@ -5,46 +12,25 @@
     description: description
 end
 
-50.times do |n| 
-  name = FFaker::Music.artist
-  description = FFaker::Lorem.paragraphs
-  avatar = FFaker::Image.url
-  category_id = rand 1..10
-  Artist.create! name: name,
-    description: description,
-    avatar: avatar,
-    category_id: category_id
-end
-
-20.times do |n| 
+20.times do |n|
   name = FFaker::Music.album
   description = FFaker::Lorem.paragraph
-  avatar = FFaker::Image.url
+  Artist.create! name: name,
+    description: description
+end
+
+20.times do |n|
+  name = FFaker::Name.name
+  description = FFaker::Lorem.paragraph
+  Author.create! name: name,
+    description: description
+end
+
+20.times do
+  name = FFaker::Music.artist
+  description = FFaker::Lorem.paragraph
   artist_id = rand 1..20
   Album.create! name: name,
     description: description,
-    avatar: avatar,
     artist_id: artist_id
-end
-
-30.times do |n| 
-  name = FFaker::Name.name
-  avatar = FFaker::Image.url
-  Author.create! name: name,
-    avatar: avatar
-end
-
-100.times do |n|
-  name = FFaker::Music.song
-  data = "music-#{n+1}.mp3"
-  category_id = rand 1..20
-  album_id = rand 1..20
-  artist_id = rand 1..50
-  author_id = rand 1..30
-  Song.create! name: name,
-    data: data,
-    category_id: category_id,
-    album_id: album_id,
-    artist_id: artist_id,
-    author_id: author_id
 end

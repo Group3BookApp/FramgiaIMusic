@@ -1,0 +1,25 @@
+<% @albums.each do |album| %>
+  <table id="table" class="table table-hover">
+    <tbody>
+      <tr>
+        <td class="width_avatar">
+          <%= image_tag album.avatar.url, size: Settings.size_avatar %>
+        </td>
+        <td class="width_name"><%= album.name %></td>
+        <td class="width_description">
+          <%= truncate album.description, length: Settings.truncate_description %>
+        </td>
+        <td class="width_name"><%= album.artist.name %></td>
+        <td class="width_name"><%= album.songs.count %></td>
+        <td class="width_action">
+          <%= link_to t(".view"), admin_album_path(album),
+            class: "width_a btn btn-info btn-sm" %>
+          <%= link_to t(".edit"), edit_admin_album_path(album),
+            class: "width_a btn btn-warning btn-sm" %>
+          <%= link_to t(".delete"), admin_album_path(album), method: :delete,
+            class: "width_a btn btn-danger btn-sm", data: {confirm: t(".you_sure")} %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>
