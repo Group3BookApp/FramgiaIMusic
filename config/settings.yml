@@ -1,5 +1,6 @@
 length_name: 100
 length_description: 500
-per_page: 5
-page_artist: 5
 size_avatar: 100
+per_page: 12
+page_artist: 5
+page_album: 4

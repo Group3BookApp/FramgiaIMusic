@@ -90,6 +90,31 @@ en:
       see_all: See All
       show: "Show"
       albums: "Albums"
+    play_info:
+      time: "0:00"
+      now_play: "Now Playing"
+    show:
+      info: "Information Singer"
+      new: "New"
+      song_special: "Song Special"
+      singer_album: "Singer Album" 
+      read_more: "READ MORE"
+  albums:
+    album: 
+      feature_albums: "Featured Albums"
+      new: "New"
+    list_album:
+      see_all : "See All"
+    index:
+      new_releases: "New Releases"
+      see_all : "See All"
+    show:
+      icon: "♪♫♥"
+      icon1: "♪♫♥"
+      info: "Information Album"
+      singer: "Singer"
+      new: "New"
+      list: "List Song In Album"
   static_pages:
     home:
       you_sure: "Are you sure?"

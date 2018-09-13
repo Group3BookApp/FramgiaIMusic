@@ -13,4 +13,6 @@ Rails.application.routes.draw do
     resources :songs
   end
   resources :artists
+  resources :albums
+  get "artists_path", to: "artists#index"
 end

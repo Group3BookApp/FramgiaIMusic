@@ -1,2 +1,66 @@
-<%= render "artists/info_artist" %>
-<%= render "artists/artist" %>
+<div id="page-wrapper">
+  <div id="image_font">
+  </div>
+  <div>
+    <%= render "artists/play_info" %>
+  </div>
+  <div id="show1"></div>
+  <div class="row col-md-4" id="show2">
+    <div class="tittle-head">
+	  <h3 class="tittle"><%= t(".info") %><span class="new"><%= t(".new") %></span></h3>
+	  <div class="clearfix"></div>
+	</div>
+	<div><%= @artist_song.description %></div>
+  </div>
+  <div class="row col-md-3" id="show3">
+    <div class="tittle-head">
+	  <h3 class="tittle"><%= t(".song_special") %><span class="new"><%= t(".new") %></span></h3>
+	  <div class="clearfix"></div>
+	</div>
+	  <div class="video-main">
+	    <div class="video-record-list">
+		  <div id="jp_container_1" class="jp-video jp-video-270p" role="application" aria-label="media player">
+			<div class="jp-type-playlist">
+			  <div class="jp-playlist">
+				<ul id="show_ul">
+				  <% @song_artist.each do |song| %>
+					<li class="jp-playlist-current" id="show_li">
+					  <div>
+	              <%= link_to song.name, songs_path %>
+					  	</a>
+					  </div>
+					</li>
+				   <% end %>
+				</ul>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+  </div>
+
+  <div class="row col-md-4" id="show5">
+    <div class="tittle-head">
+	  <h3 class="tittle"><%= t(".singer_album") %><span class="new"><%= t(".new") %></span></h3>
+	  <div class="clearfix"></div>
+	</div>
+	<ul id="flexiselDemo1">
+		<% @album_artist.each do|album| %>
+	  <li>
+		<%= link_to image_tag "soobin1.jpg", alt: "" %>
+		<div class="slide-title"><h4>
+		  <%= link_to album.name, albums_path %></h4>
+		</div>
+		<div class="date-city">
+		  <h5><%= Time.now %></h5>
+		  <div class="buy-tickets">
+        <%= link_to t(".read_more"), albums_path %>
+		  </div>
+		</div>
+	  </li>
+	  <% end %>
+	</ul>
+  </div>
+  <div id="show6"></div>
+  <%= render "artists/comment_player" %>
+</div>

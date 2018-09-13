@@ -19,14 +19,11 @@
           <span><%= t ".apps" %></span>
         <% end %>
       </li>
-      <li><a href="/artists/show"><i class="lnr lnr-users"></i>
+      <li><a href="/artists"><i class="lnr lnr-users"></i>
         <span><%= t ".artists" %></span></a>
       </li>
-      <li>
-        <%= link_to songs_path, class: "hover_menu_left_x" do %>
-          <i class="lnr lnr-music-note"></i>
-          <div class="hover_menu_left_0"><%= t ".songs" %></div>
-        <% end %>
+      <li><a href="/songs" class="hover_menu_left_x"><i class="lnr lnr-music-note"></i>
+        <span><%= t ".songs" %></span></a>
       </li>
       <li>
         <%= link_to categories_path, class: "hover_menu_left_x" do %>
@@ -34,8 +31,8 @@
           <div class="hover_menu_left_0"><%= t ".cate" %></div>
         <% end %>
       </li>
-      <li><a href="#"><i class="lnr lnr-book"></i>
-        <span><%= t "blog" %></span></a>
+      <li><a href="/albums"><i class="lnr lnr-book"></i>
+        <span><%= t "albums" %></span></a>
       </li>
       <li><a href="#"><i class="lnr lnr-pencil"></i>
         <span><%= t ".typography" %></span></a>

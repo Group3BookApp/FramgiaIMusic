@@ -1,0 +1,28 @@
+<div class="albums second">
+  <div class="tittle-head">
+    <h3 class="tittle"><%= t(".new_releases") %><span class="new"><%= t(".new") %></span></h3>
+    <a href="#">
+      <h4 class="tittle"><%= t(".see_all") %></h4>
+    </a>
+    <div class="clearfix"> </div>
+  </div>
+  <% @song_album.each do|album| %>
+    <div class="col-md-3 content-grid">
+      <%= link_to "#small-dialog", class: "play-icon popup-with-zoom-anim" do %>
+        <%= image_tag "v1.jpg", title: "allbum-name" %>
+      <% end %>
+      <%= link_to album.name, album_path(album)%>
+    </div>
+    <div class="inner-info">
+      <a href="#">
+        <h5><%= album.name %></h5>
+      </a>
+    </div>
+  <% end %>
+  <div id="small-dialog" class="mfp-hide">
+  	<frame></frame>
+  </div>
+</div>
+<div class="clearfix"> </div>
+<%= paginate @song_album, theme: "twitter-bootstrap-3" %>
+<%= render "albums/album" %>

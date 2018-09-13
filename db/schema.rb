@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_10_055209) do
+ActiveRecord::Schema.define(version: 2018_09_11_190554) do
 
   create_table "albums", force: :cascade do |t|
     t.string "name"
@@ -26,8 +26,10 @@ ActiveRecord::Schema.define(version: 2018_09_10_055209) do
     t.string "name"
     t.string "avatar"
     t.text "description"
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_artists_on_category_id"
   end
 
   create_table "authors", force: :cascade do |t|
@@ -43,6 +45,40 @@ ActiveRecord::Schema.define(version: 2018_09_10_055209) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "song_id"
+    t.integer "favorite_id"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["favorite_id"], name: "index_comments_on_favorite_id"
+    t.index ["song_id"], name: "index_comments_on_song_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "song_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["song_id"], name: "index_favorites_on_song_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "rates", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "song_id"
+    t.integer "favorite_id"
+    t.integer "num_rate"
+    t.float "avg_rate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["favorite_id"], name: "index_rates_on_favorite_id"
+    t.index ["song_id"], name: "index_rates_on_song_id"
+    t.index ["user_id"], name: "index_rates_on_user_id"
   end
 
   create_table "songs", force: :cascade do |t|
