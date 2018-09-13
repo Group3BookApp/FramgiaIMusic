@@ -1,0 +1,38 @@
+<div class="card card-plain">
+  <div class="dark-edition">
+    <div class="card-header card-header-primary">
+      <h4 class="modal-title"><%= t ".view_song" %></h4>
+    </div><br>
+    <div class="modal-body">
+      <div class="card card-profile">
+        <div class="card-avatar">
+          <%= image_tag @song.avatar.url,size: Settings.size_avatar %>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title"><%= @song.name %></h2>
+          <p><%= t ".author" %>
+            <span class="view_bold"><%= @song.author.name %></span>
+          </p>
+          <p><%= t ".category" %>
+            <span class="view_bold"><%= @song.category.name %></span>
+          </p>
+          <p><%= t ".artist" %>
+            <span class="view_bold"><%= @song.artist.name %></span>
+          </p>
+          <p><%= t ".album" %>
+            <span class="view_bold"><%= @song.album.name %></span>
+          </p>
+          <p><%= t ".listening" %>
+            <span class="view_bold"><%= @song.listening %></span>
+          </p>
+          <p><%= audio_tag @song.data.url, controls: true %></p>
+        </div>
+      </div>
+    </div>
+    <%= link_to t(".backhome"), admin_songs_path, class: "btn btn-info" %>
+    <%= link_to t(".edit"), edit_admin_song_path(@song),
+      class: "width_a btn btn-warning" %>
+    <%= link_to t(".delete"), admin_song_path(@song), method: :delete,
+      class: "width_a btn btn-danger", data: {confirm: t(".you_sure")} %>
+  </div>
+</div>

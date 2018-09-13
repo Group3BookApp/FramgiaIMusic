@@ -1,0 +1,29 @@
+<h2><%= t ".search_song" %></h2>
+<%= search_form_for [:admin, @search], class: "form-inline" do |f| %>
+  <div class="form-group">
+    <%= f.label :name_cont, t(".s_name"), class: "space2" %>
+    <%= f.text_field :name_cont, class: "form-control",
+      placeholder: t(".enter_s_name") %>
+  </div>
+  <div class="form-group">
+    <%= f.label :artist_name_cont, t(".s_artist"), class: "space2" %>
+    <%= f.text_field :artist_name_cont, class: "form-control",
+      placeholder: t(".enter_s_name_artist") %>
+  </div>
+  <div class="form-group">
+    <%= f.label :author_name_cont, t(".s_author"), class: "space2" %>
+    <%= f.text_field :author_name_cont, class: "form-control",
+      placeholder: t(".enter_s_name_author") %>
+  </div>
+  <div class="form-group">
+    <%= f.label :category_name_cont, t(".s_category"), class: "space2" %>
+    <%= f.text_field :category_name_cont, class: "form-control",
+      placeholder: t(".enter_s_name_category") %>
+  </div>
+  <div class="form-group">
+    <%= f.label :album_name_cont, t(".s_album"), class: "space2" %>
+    <%= f.text_field :album_name_cont, class: "form-control",
+      placeholder: t(".enter_s_name_album") %>
+  </div>
+    <%= f.submit t(".search"), class: "btn btn-primary" %>
+<% end %>
