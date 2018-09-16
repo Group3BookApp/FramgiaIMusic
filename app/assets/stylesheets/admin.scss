@@ -2,3 +2,45 @@
 @import 'css/material-dashboard.css';
 @import 'css/style.css';
 @import 'demo/demo.css';
+
+/*custom-css*/
+
+.view_bold{
+  font-weight: bold;
+}
+
+.space2{
+  margin-right: 9px;
+}
+.avt_admin_header{
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 10px
+}
+.administrator{
+  width: 100px;
+  height: 50px;
+  margin-left: 10px
+}
+#table{
+  width: 100%;
+}
+.width_avatar{
+  width: 10%;
+}
+.width_name{
+  width: 10%;
+}
+.width_description{
+  width: 50%;
+}
+.width_head_action{
+  width: 10%;
+}
+.width_action{
+  width: 5%;
+}
+.width_a{
+  width: 100px;
+}

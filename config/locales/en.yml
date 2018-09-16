@@ -5,8 +5,65 @@ en:
         welcome: "Welcome to Framgia IMusic Admin"
     songs:
       new:
-        enter_name: "Enter name song..."
+        enter_name: "Enter new name..."
+        enter_listening: "Enter listening..."
         add: "ADD"
+        select_author: "Select author:"
+        select_album: "Select album:"
+        select_artist: "Select artist:"
+        select_cate: "Select category:"
+        avatar: "Avatar:"
+        data: "Data (*.mp3):"
+      index:
+        manage_songs: "Manage Songs"
+        sub_songs: "List songs"
+        avatar: "Avatar"
+        name: "Name"
+        artist: "Artist"
+        author: "Author"
+        category: "Category"
+        album: "Album"
+        listening: "Listening"
+        action: "Action"
+        new: "New Song"
+        refresh: 'Refresh'
+      search:
+        search_song: "Search song"
+        s_name: "Name:"
+        enter_s_name: "Search name song..."
+        s_artist: "Artist:"
+        enter_s_name_artist: "Search name artist..."
+        s_author: "Author:"
+        enter_s_name_author: "Search name author..."
+        s_category: "Category:"
+        enter_s_name_category: "Search name category..."
+        s_album: "Album:"
+        enter_s_name_album: "Search name album..."
+        search: "Search song!"
+      show:
+        view_song: "View Song"
+        author: "Author:"
+        category: "Category:"
+        artist: "Artist:"
+        album: "Album:"
+        listening: "Listening:"
+      edit:
+        edit_song: "Edit song"
+        enter_name: "Enter name you want..."
+        author: "Change author:"
+        album: "Change album: "
+        artist: "Change artist:"
+        category: "Change category:"
+        data: "Change data(*.mp3):"
+        avatar: "Change avatar:"
+      create:
+        createfail: "Cant create song"
+        created: "Song created"
+      song:
+        you_sure: "You definitely want to delete!!!"
+      destroy:
+        deleted: "Song deleted"
+        pls_check: "Cant delete. "
     users:
       index:
         manage_users: "Manage Users"
@@ -22,6 +79,187 @@ en:
         deleted: "User deleted"
       load_user:
         not_found: "Not found"
+    artists:
+      index:
+        manage_artists: "Manage Artists"
+        sub_artists: "List Artists"
+        avatar: "Avatar"
+        name: "Name"
+        description: "Description"
+        action: "Action"
+      show:
+        backhome: "<< Back"
+        view_artist: "View Artist"
+        edit: "Edit"
+        delete: "Delete"
+      edit:
+        backhome: "<< Back"
+        enter_need_edit: "Enter name you want...."
+        enter_des_edit: "Enter description you want...."
+      artists:
+        view: "View"
+        edit: "Edit"
+        delete: "Delete"
+        you_sure: "You definitely want to delete!!!"
+      new:
+        enter_name: "Enter new name artist..."
+        enter_description: "Enter new description..."
+        new: "New Artist"
+        new_artist: "New Artist"
+      search:
+        s_name: "Name: "
+        enter_s_name: "Enter search name...."
+        s_description: "Description:"
+        enter_s_description: "Enter search description...."
+        search: "Search!"
+        search_artist: "Search Artist"
+        refresh: "Refresh"
+      created: "Artist created"
+      createfail: "Artist no create"
+      update:
+        updated: "Artist updated"
+      destroy:
+        deleted: "Artist deleted"
+        pls_check: "Cant delete. Artists have albums or songs"
+    authors:
+      index:
+        manage_author: "Manage Author"
+        sub_author: "List authors"
+        new: "New author"
+        refresh: "Refresh"
+        avatar: "Avatar"
+        name: "Name"
+        description: "Description"
+        song_count: "Song count"
+        action: "Action"
+        new_author: "New Author"
+      authors:
+        view: "View"
+        delete: "Delete"
+        edit: "Edit"
+        you_sure: "You definitely want to delete!!!"
+      destroy:
+        deleted: "Author deleted"
+        delete_fail: "Cant delete author"
+        pls_check: "Cant delete. Author have songs"
+      search:
+        search_author: "Search author"
+        s_name: "Name:"
+        enter_s_name: "Search name...."
+        s_description: "Description:"
+        enter_s_description: "Search description..."
+        search: "Search!"
+      show:
+        view_author: "View Author"
+        backhome: "<<Back"
+        delete: "Delete"
+        edit: "Edit"
+      edit:
+        edit_authors: "Edit Author"
+        enter_name_edit: "Change name you want..."
+        enter_des_edit: "Change description you want..."
+        backhome: "<<Back"
+      new:
+        enter_name: "Enter new name..."
+        enter_description: "Enter new description..."
+        new: "ADD"
+      create:
+        created: "Author created"
+    categories:
+      index:
+        manage_category: "Manage Category"
+        sub_category: "List categories"
+        new: "New Category"
+        refresh: "Refresh"
+        avatar: "Avatar"
+        name: "Name"
+        description: "Description"
+        song_count: "Song count"
+        action: "Action"
+        new_category: "New Category"
+      categories:
+        view: "View"
+        delete: "Delete"
+        edit: "Edit"
+        you_sure: "You definitely want to delete!!!"
+      destroy:
+        deleted: "Category deleted"
+        delete_fail: "Cant delete category"
+        pls_check: "Cant delete. Category have songs"
+      search:
+        search_category: "Search category"
+        s_name: "Name:"
+        enter_s_name: "Search name...."
+        s_description: "Description:"
+        enter_s_description: "Search description..."
+        search: "Search!"
+      show:
+        view_category: "View Category"
+        backhome: "<<Back"
+        delete: "Delete"
+        edit: "Edit"
+      edit:
+        edit_category: "Edit Category"
+        enter_name_edit: "Change name you want..."
+        enter_des_edit: "Change description you want..."
+        backhome: "<<Back"
+      new:
+        enter_name: "Enter new name..."
+        enter_description: "Enter new description..."
+        new: "ADD"
+      create:
+        created: "Author created"
+    albums:
+      index:
+        manage_album: "Manage Album"
+        sub_album: "List album"
+        new: "New Album"
+        refresh: "Refresh"
+        avatar: "Avatar"
+        name: "Name"
+        description: "Description"
+        artist: "Artist"
+        song_count: "Song count"
+        action: "Action"
+        new_album: "New Album"
+      albums:
+        view: "View"
+        delete: "Delete"
+        edit: "Edit"
+        you_sure: "You definitely want to delete!!!"
+      destroy:
+        deleted: "Category deleted"
+        delete_fail: "Cant delete category"
+        pls_check: "Cant delete. Album have songs"
+      search:
+        search_album: "Search album"
+        s_name: "Name:"
+        enter_s_name: "Search name...."
+        s_description: "Description:"
+        enter_s_description: "Search description..."
+        s_artist: "Artist:"
+        enter_s_artist: "Search artist..."
+        search: "Search!"
+      show:
+        view_album: "View Album"
+        backhome: "<<Back"
+        delete: "Delete"
+        edit: "Edit"
+      edit:
+        edit_album: "Edit Album"
+        enter_name_edit: "Change name you want..."
+        enter_des_edit: "Change description you want..."
+        artist: "Change artist:"
+        avatar: "Change avatar:"
+        avatar_old: "Change old:"
+        backhome: "<<Back"
+      new:
+        enter_name: "Enter new name..."
+        enter_description: "Enter new description..."
+        select_artist: "Select artist:"
+        new: "ADD"
+      create:
+        created: "Author created"
   layouts:
     admin:
       admin:
@@ -32,6 +270,7 @@ en:
         manage_user: "Manage Users"
         icon_person: "person"
         manage_artist: "Manage Artists"
+        manage_author: "Manage Author"
         manage_category: "Manage Categories"
         icon_content_paste: "content_paste"
         manage_album: "Manage Albums"
@@ -42,6 +281,8 @@ en:
         favorite: "favorite"
         t3: "Team 3 Framgia Open Education"
         better: "for a better web."
+        welcome: "Welcome to Framgia IMusic Admin"
+        administrator: "Administrator"
     application:
       base_title: "Framgia IMusic"
     leftside:
@@ -213,3 +454,20 @@ en:
       some_user: "Some user related content goes here..."
     update:
       profile_update: "Profile was successfully updated."
+    index:
+      manage_users: "Manage Users"
+      not_admin: "The page you were looking for doesn't exist (404)"
+      avatar: "Avatar"
+      name: "Name"
+      email: "Email"
+      action: "Action"
+    user:
+      delete: "Delete"
+      you_sure: "You definitely want to delete!!!"
+    destroy:
+      deleted: "User deleted"
+    load_user:
+      not_found: "Not found"
+  songs:
+    show:
+      listening: "Listening:"

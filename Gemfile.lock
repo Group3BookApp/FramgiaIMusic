@@ -51,7 +51,7 @@ GEM
       execjs
     bcrypt (3.1.12)
     bindex (0.5.0)
-    bootsnap (1.3.1)
+    bootsnap (1.3.2)
       msgpack (~> 1.0)
     bootstrap (4.1.3)
       autoprefixer-rails (>= 6.0.3)
@@ -141,6 +141,8 @@ GEM
       railties (>= 3.2, < 6.0)
     font-awesome-sass (5.3.1)
       sassc (>= 1.11)
+    friendly_id (5.2.4)
+      activerecord (>= 4.0.0)
     frontend-generators (0.2.0)
       rainbow (= 2.0.0)
       turf (= 0.0.5)
@@ -214,6 +216,7 @@ GEM
       oauth2 (~> 1.1)
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
+    pg (0.21.0)
     popper_js (1.14.3)
     public_suffix (3.0.3)
     puma (3.12.0)
@@ -300,21 +303,16 @@ GEM
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
-    turbolinks (5.2.0)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
     turf (0.0.5)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.18)
-      execjs (>= 0.3.0, < 3)
     warden (1.2.7)
+      rack (>= 1.0)
+    web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
-      rack (>= 1.0)
       railties (>= 5.0)
-    web-console (3.7.0)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
@@ -341,6 +339,7 @@ DEPENDENCIES
   figaro
   font-awesome-rails
   font-awesome-sass
+  friendly_id (~> 5.2.0)
   frontend-generators
   jbuilder (~> 2.5)
   jquery-rails
@@ -349,6 +348,7 @@ DEPENDENCIES
   mini_magick (= 4.7.0)
   omniauth
   omniauth-google-oauth2 (<= 1.0.3)
+  pg (~> 0.18)
   puma (~> 3.11)
   rails (~> 5.2.1)
   rails-i18n
@@ -358,10 +358,9 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
+  sprockets-rails
   sqlite3
-  turbolinks (~> 5)
   tzinfo-data
-  uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
 
 RUBY VERSION

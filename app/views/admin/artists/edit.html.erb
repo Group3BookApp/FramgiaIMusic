@@ -1,0 +1,17 @@
+<div class="card card-plain">
+  <div class="card-header card-header-primary">
+    <h4 class="card-title mt-0"><%= t ".edit_artists" %></h4>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <%= simple_form_for [:admin, @artist] do |f| %>
+        <%= f.input :name, placeholder: t(".enter_name_edit") %>
+        <%= f.input :description, placeholder: t(".enter_des_edit") %>
+        <%= f.file_field :avatar %>
+        <%= image_tag @artist.avatar.url,size: Settings.size_avatar_edit %>
+        <%= f.button :submit, class: "btn btn-primary" %>
+        <%= link_to t(".backhome"), admin_artists_path, class: "btn btn-info" %>
+      <% end %>
+    </div>
+  </div>
+</div>

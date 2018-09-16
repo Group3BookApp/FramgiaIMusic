@@ -7,9 +7,8 @@ gem "sass-rails", "~> 5.0"
 gem "jquery-rails"
 gem "bootstrap", "~> 4.1.3"
 gem "puma", "~> 3.11"
-gem "uglifier", ">= 1.3.0"
+# gem "uglifier", ">= 1.3.0"
 gem "coffee-rails", "~> 4.2"
-gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "config"
@@ -30,6 +29,8 @@ gem "devise"
 gem "omniauth"
 gem "omniauth-google-oauth2", "<=1.0.3"
 gem "simple_form"
+gem "sprockets-rails", :require => "sprockets/railtie"
+gem "friendly_id", "~> 5.2.0"
 
 group :development, :test do
   gem "sqlite3"
@@ -47,6 +48,10 @@ group :test do
   gem "capybara", ">= 2.15"
   gem "selenium-webdriver"
   gem "chromedriver-helper"
+end
+
+group :production do
+  gem "pg", "~> 0.18"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
