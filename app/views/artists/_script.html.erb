@@ -1,0 +1,93 @@
+<script type="text/javascript">
+  var audio = new Audio('http://f.x2convert.com/files/2018/9/7/vietsub_kara_ego_bigbang.mp3');
+  var audio1 = new Audio('http://f.x2convert.com/files/2018/9/7/vietsub_kara_ego_bigbang.mp3');
+  var audio2 = new Audio('http://f.x2convert.com/files/2018/9/7/vietsub_kara_ego_bigbang.mp3');
+  var audioList = [];
+
+  /* set volum */
+  /* set volum */
+  var audioTotalTime = 0;
+  $('body').on('click','.fa-play',function(e){
+    audio.play();
+    audioTotalTime = audio.duration / 60;
+    $(this).addClass('fa-pause')
+    $(this).removeClass('fa-play');
+    $('.song_long').text(Math.round(audioTotalTime * 100) / 100);
+    updateCurrentTime();
+  });
+
+  $('body').on('click','input[type=range]',function(){
+    audio.pause();
+    audio.currentTime = audioTotalTime * $(this).val();
+     audio.play();
+  });
+
+  $('body').on('click','.fa-pause',function(){
+    audio.pause();
+    $(this).addClass('fa-play')
+    $(this).removeClass('fa-pause');
+  });
+
+  $('body').on('click','.fa-music',function(){
+    $('.song_list').slideToggle();
+  });
+
+  $('body').on('click','.fa-fast-forward',function(){
+    audio.next();
+  });
+
+  function updateCurrentTime(){
+    setInterval(function(){
+      var time = audio.currentTime;
+      var minutes = Math.floor(time / 60);
+      var seconds = Math.floor(time);
+      seconds = (seconds - (minutes * 60 )) < 10 ? ('0' + (seconds - (minutes * 60 ))) : (seconds - (minutes * 60 ));
+      var currentTime = minutes + ':' + seconds;
+      $('.runing_time').text(currentTime);
+      $("input[type=range]").val(time/audioTotalTime )
+    },1000)
+  }
+
+
+
+</script>
+
+
+<script type="text/javascript">
+  var audio = new Audio('http://f.x2convert.com/files/2018/9/7/vietsub_kara_ego_bigbang.mp3');
+  var audio1 = new Audio('http://f.x2convert.com/files/2018/9/7/vietsub_kara_ego_bigbang.mp3');
+  var audio2 = new Audio('http://f.x2convert.com/files/2018/9/7/vietsub_kara_ego_bigbang.mp3');
+
+  function loadSong(songIndex) {
+    const audioUrl = audioList[songIndex];
+    return new Audio(audioUrl);
+  }
+
+  function renderSong(songObject) {
+    // Render song information to HTML
+  }
+
+  $('body').on('click','.fa-play',function loadSong(songIndex)function nextSong() {
+    currentSong = (currentSong + 1) % audioList.length;
+  });
+
+  function prevSong() {
+    currentSong = (currentSong + audioList.length - 1) % audioList.length;
+  }
+
+  audioList = [];
+  currentSong = 0;
+  songObject = loadSong();
+  audio.play();
+
+
+
+  const nextButton = document.getElementById('next-song-button');
+  const prevButton = document.getElementById('prev-song-button');
+
+  nextButton.onclick = function () {
+    const songObject = nextSong();
+    renderSong(songObject);
+    audio.play();
+  }
+</script>

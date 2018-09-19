@@ -17,7 +17,8 @@
                   <%= t ".sign_in_with_facebook" %>
                 </a></li>
                 <li>
-                  <%= link_to "auth/google_oauth2", id: "sign_in", class: "goog" do %>
+                  <%= link_to users_auth_google_oauth2_path, id: "sign_in",
+                    class: "goog" do %>
                     <i></i><%= t ".sign_in_with_google" %>
                   <% end %>
                 </li>
@@ -28,17 +29,21 @@
             </div>
             <div class="sign-right">
               <h3><%= t ".create_your_account" %></h3>
-              <%= simple_form_for resource, as: resource_name, url: registration_path(resource_name) do |f| %>
+              <%= simple_form_for resource, as: resource_name,
+                url: registration_path(resource_name) do |f| %>
                 <%= devise_error_messages! %>
                 <%= f.label :email %>
-                <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                <%= f.email_field :email, autofocus: true,
+                  autocomplete: "email" %>
                 <%= f.label :password %>
                 <% if @minimum_password_length %>
-                  <em>(<%= @minimum_password_length %> characters minimum)</em>
+                  <em>(<%= @minimum_password_length %>
+                    <%= t ".characters_minimum" %>)</em>
                 <% end %>
                 <%= f.password_field :password, autocomplete: "new-password" %>
                 <%= f.label :password_confirmation %>
-                <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+                <%= f.password_field :password_confirmation,
+                  autocomplete: "new-password" %>
                 <div class="actions">
                   <%= f.submit t ".create_account" %>
                 </div>

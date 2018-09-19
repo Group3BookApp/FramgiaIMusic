@@ -1,0 +1,80 @@
+<div id="page-wrapper">
+  <div id = "album1">
+  </div>
+</div>
+  <div id = "album2">
+    <div class="tittle-head">
+    <h3 class="tittle"><%= t(".singer") %><span class="new"><%= t(".new") %></span></h3>
+    <div class="clearfix"></div>
+  </div>
+  <div id="album3">
+    <%= t(".icon") %><%= @song_album.artist.name %><%= t(".icon") %>
+  </div>
+  </div>
+  <div id="album4">
+    <div class="tittle-head">
+    <h3 class="tittle"><%= t(".info") %><span class="new"><%= t(".new") %></span></h3>
+    <div class="clearfix"></div>
+  </div>
+  <div><h3><%= @song_album.description %></h3></div>
+  </div>
+  <div id="album5">
+    <div class="tittle-head" style="float: left">
+    <h3 class="tittle"><%= t(".list") %><span class="new"><%= t(".new") %></span></h3>
+    <div class="clearfix"></div>
+    </div>
+    <div class="video-main">
+      <div class="video-record-list">
+      <div id="jp_container_1" class="jp-video jp-video-270p" role="application" aria-label="media player">
+      <div class="jp-type-playlist">
+<div class="music-right" style="float: right; width: 45%">
+  <!-- //widget -->
+    <div class="widget-side">
+    <h4 class="widget-title">Recent Posts</h4>
+      <ul>
+        <li>
+          <a href="single.html">Taylor Swift – Shake It Off</a>
+          <span class="post-date">Feb 13, 2016</span>
+        </li>
+        <li>
+          <a href="single.html">Love Me Like You Do – Ellie Goulding (Fifty Shades of Grey Soundtrack) HQ</a>
+          <span class="post-date">Feb 14, 2016</span>
+        </li>
+        <li>
+          <a href="single.html">Jessie J – Flashlight (from Pitch Perfect 2)</a>
+          <span class="post-date">Feb 16, 2016</span>
+        </li>
+        <li>
+          <a href="single.html">Sol – “Ain’t Gon’ Stop”</a>
+          <span class="post-date">Feb 18, 2016</span>
+        </li>
+        <li>
+          <a href="single.html">Eminem – No Love (Explicit Version) ft. Lil Wayne</a>
+          <span class="post-date">Feb 19, 2016</span>
+        </li>
+      </ul>
+     </div>
+  </div>
+        <div class="jp-playlist" style="width: 50%; float: left">
+        <ul>
+          <% @list_song.each do |song| %>
+          <li>
+                  <div class="entry-meta">
+                    <div class="icons">
+                      <a href="#"><i class="fa fa-comments-o"></i> 2</a>
+                      <a href="#"><i class="fa fa-thumbs-o-up"></i> 152</a>
+                      <a href="#"><i class="lnr lnr-music-note"></i>  26</a>
+                    </div>
+                  </div>
+                <div>
+                  <h3 style="width: 50%"><%= link_to song.name %><%= "     " %><%= t(".icon") %></h3>
+                </div>
+          </li>
+           <% end %>
+        </ul>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>

@@ -1,0 +1,46 @@
+<div class="music_player">
+  <div class="artist_img">
+    <%= link_to image_tag "soobin1.jpg" %>
+  </div>
+  <div class="time_slider">
+    <span class="runing_time"><%= t(".time") %></span>
+    <input type="range" value="0">
+    <span class="song_long"><%= t(".time") %></span>
+  </div>
+  <div class="now_playing">
+    <i class="fa fa-refresh" aria-hidden="true"></i>
+    <p><%= t(".now_play") %></p>
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </div>
+  <div class="music_info">
+    <h2><%= @artist.name %></h2>
+    <p class="date"><%= Time.now %></p>
+    <p class="song_title"><%= %></p>
+    <%= render "artists/rating_player" %>
+    <%= render "artists/script" %>
+  </div>
+  <div class="controllers">
+    <i class="fa fa-music" aria-hidden="true"></i>
+    <i class="fa fa-fast-backward" aria-hidden="true"></i>
+    <i class="fa fa-play" aria-hidden="true"></i>
+    <i class="fa fa-fast-forward" aria-hidden="true"></i>
+    <i class="fa fa-retweet" aria-hidden="true"></i>
+    <i class="far fa-volume-up" aria-hidden="true"></i>
+  </div>
+</div>
+
+<div class="song_list">
+  <div class="title">
+    <ul>
+      <% @song.each do |song| %>
+        <li class="songs"><%= song.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="title">
+    <ul>
+      <% @author_song.each do |author| %>
+        <li class="authors"><%= author.name %></li>
+      <% end %>
+  </div>
+</div>

@@ -73,13 +73,13 @@ body {
 .slide-content::-webkit-scrollbar {
   width: 5px;
 }
- 
+
 .slide-content::-webkit-scrollbar-thumb:vertical {
   margin: 5px;
   background-color: #999;
   -webkit-border-radius: 5px;
 }
- 
+
 .slide-content::-webkit-scrollbar-button:start:decrement,
 .slide-content::-webkit-scrollbar-button:end:increment {
   height: 5px;

@@ -1,12 +1,20 @@
-<div>
-  <% if user_signed_in? %>
-    <%= t ".signed_in_as" %><strong><%= current_user.name || current_user.email %></strong>.
-    <%= link_to t(".show"), user_path %>
-    <%= link_to t(".edit_password"), edit_user_registration_path %>
-    <%= link_to t(".edit_profile"), edit_user_path %>
-    <%= link_to t(".logout"), destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to t(".sign_in"), new_user_session_path %>
-    <%= link_to t(".sign_in_with_google"), "auth/google_oauth2", id: "sign_in" %>
-  <% end %>
+<div class="play_list" style="background-image: url(https://bookmon.files.wordpress.com/2018/01/edm.jpg?w=1400)">
+<div class="content">
+   <div class="lyrics"></div>
+</div>
+
+<div class="player">
+   <div class="left"></div>
+   <div class="right">
+      <div class="top">
+         <a class="song" href="https://open.spotify.com/track/52LlzTfdulBMiwH4BZy5Sq?si=1c1rwqNYSf6ZaaRbzlstLQ">Let's Go To the Forest</a>
+         <a class="artist" href="https://open.spotify.com/artist/6OqhFYFJDnBBHas02HopPT?si=vQaSwY1DRkyhj-eoKZlMrw">Kero Kero Bonito</a>
+      </div>
+      <div class="bottom">
+         <video controls="" _autoplay="" name="media"><source src="https://i.koya.io/Kero%20Kero%20Bonito%20-%20Let's%20Go%20To%20The%20Forest.mp3" type="audio/mpeg"></video>
+      </div>
+   </div>
+</div>
+<%= render "songs/script" %>
+</div>
 </div>

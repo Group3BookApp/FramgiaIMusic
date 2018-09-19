@@ -14,13 +14,10 @@
         <% end %>
       </li>
       <li>
-        <%= link_to "#", data: {toggle: "modal", target: "#myModal1"} do %>
-          <i class="fa fa-th"></i>
-          <span><%= t ".apps" %></span>
+        <%= link_to artists_path do %>
+          <i class="lnr lnr-users"></i>
+          <span><%= t ".artists" %></span>
         <% end %>
-      </li>
-      <li><a href="/artists/show"><i class="lnr lnr-users"></i>
-        <span><%= t ".artists" %></span></a>
       </li>
       <li>
         <%= link_to songs_path, class: "hover_menu_left_x" do %>
