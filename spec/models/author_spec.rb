@@ -4,7 +4,7 @@ RSpec.describe Author, :type => :model do
     it {is_expected.to have_many :songs}
   end
 
-  describe "validatx`ions" do
+  describe "validation" do
     it "has a valid factory" do
       author = FactoryBot.build :author
       expect(author).to be_valid
