@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-plain">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title mt-0"><%= t ".manage_album" %></h4>
+        <p class="card-category"><%= t ".sub_album" %></p>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <div>
+            <div><%= render "search" %></div>
+            <div>
+              <%= link_to t(".new"), "#", class: "btn btn-primary",
+                data: {toggle: "modal", target: "#new_album_id"} %>
+              <%= link_to t(".refresh"), admin_albums_path, class: "btn btn-info" %>
+            </div>
+          </div>
+          <%= paginate @albums %>
+          <table id="table" class="table table-hover">
+            <tbody>
+              <tr>
+                <th class="width_avatar"><%= t ".avatar" %></th>
+                <th class="width_name"><%= sort_link @search, :name, t(".name") %></th>
+                <th class="width_description"><%= sort_link @search, :description, t(".description") %></th>
+                <th class="width_name"><%= sort_link @search, :artist_name, t(".artist") %></th>
+                <th class="width_name"><%= t ".song_count" %></th>
+                <th class="width_head_action"><%= t ".action" %></th>
+              </tr>
+            </tbody>
+          </table>
+          <%= render "not_found" %>
+          <%= render "albums" %>
+          <div id="new_album_id" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content dark-edition">
+                <div class="modal-header">
+                  <h2 class="modal-title"><%= t ".new_album" %></h2>
+                </div>
+                <div class="modal-body">
+                  <%= render "new" %>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

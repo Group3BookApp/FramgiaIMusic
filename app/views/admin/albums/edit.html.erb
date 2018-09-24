@@ -1,0 +1,22 @@
+<div class="card card-plain">
+  <div class="card-header card-header-primary">
+    <h4 class="card-title mt-0"><%= t ".edit_authors" %></h4>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <%= simple_form_for [:admin, @album] do |f| %>
+        <%= f.input :name, placeholder: t(".enter_name_edit") %>
+        <%= f.input :description, placeholder: t(".enter_des_edit") %>
+        <h3><%= t ".artist" %></h3>
+        <%= f.collection_select :artist_id, @artist_name, :id, :name,
+          include_blank: false %>
+        <h3><%= t ".avatar" %></h3>
+        <%= f.file_field :avatar %>
+        <h3><%= t ".avatar_old" %></h3>
+        <%= image_tag @album.avatar.url,size: Settings.size_avatar_edit %>
+        <%= f.button :submit, class: "btn btn-primary" %>
+        <%= link_to t(".backhome"), admin_albums_path, class: "btn btn-info" %>
+      <% end %>
+    </div>
+  </div>
+</div>

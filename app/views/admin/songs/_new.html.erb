@@ -1,5 +1,6 @@
 <%= simple_form_for :song do |f| %>
   <%= f.input :name, input_html: {value: ""}, placeholder: t(".enter_name") %>
+  <%= f.input :listening, input_html: {value: ""}, placeholder: t(".enter_listening") %>
   <h3><%= t ".select_author" %></h3>
   <%= f.collection_select :author_id, @author_name, :id, :name,
     include_blank: false %>
