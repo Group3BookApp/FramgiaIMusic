@@ -33,6 +33,10 @@ gem "sprockets-rails", :require => "sprockets/railtie"
 gem "friendly_id", "~> 5.2.0"
 
 group :development, :test do
+  gem "rspec-rails", "~> 3.8"
+  gem "factory_bot_rails"
+  gem "factory_bot"
+  gem "capybara", ">= 2.15"
   gem "sqlite3"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -45,7 +49,7 @@ group :development do
 end
 
 group :test do
-  gem "capybara", ">= 2.15"
+  gem "shoulda-matchers", "~> 3.1"
   gem "selenium-webdriver"
   gem "chromedriver-helper"
 end
