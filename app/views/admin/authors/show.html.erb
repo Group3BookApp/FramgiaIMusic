@@ -1,0 +1,23 @@
+<div class="card card-plain">
+  <div class="dark-edition">
+    <div class="card-header card-header-primary">
+      <h4 class="modal-title"><%= t ".view_author" %></h4>
+    </div><br>
+    <div class="modal-body">
+      <div class="card card-profile">
+        <div class="card-avatar">
+          <%= image_tag @author.avatar.url,size: Settings.size_avatar %>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title"><%= @author.name %></h4>
+          <p class="card-description"><%= @author.description %></p>
+        </div>
+      </div>
+    </div>
+    <%= link_to t(".backhome"), admin_authors_path, class: "btn btn-info" %>
+    <%= link_to t(".edit"), edit_admin_author_path(@author),
+      class: "width_a btn btn-warning" %>
+    <%= link_to t(".delete"), admin_author_path(@author), method: :delete,
+      class: "width_a btn btn-danger", data: {confirm: t(".you_sure")} %>
+  </div>
+</div>

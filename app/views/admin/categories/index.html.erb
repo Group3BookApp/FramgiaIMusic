@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-plain">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title mt-0"><%= t ".manage_category" %></h4>
+        <p class="card-category"><%= t ".sub_category" %></p>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <div>
+            <div><%= render "search" %></div>
+            <div>
+              <%= link_to t(".new"), "#", class: "btn btn-primary",
+                data: {toggle: "modal", target: "#new_category_id"} %>
+              <%= link_to t(".refresh"), admin_categories_path, class: "btn btn-info" %>
+            </div>
+          </div>
+          <%= paginate @categories %>
+          <table id="table" class="table table-hover">
+            <tbody>
+              <tr>
+                <th class="width_name"><%= sort_link @search, :name, t(".name") %></th>
+                <th class="width_description"><%= sort_link @search, :description, t(".description") %></th>
+                <th class="width_name"><%= t ".song_count" %></th>
+                <th class="width_head_action"><%= t ".action" %></th>
+              </tr>
+            </tbody>
+          </table>
+          <%= render "not_found" %>
+          <%= render "categories" %>
+          <div id="new_category_id" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content dark-edition">
+                <div class="modal-header">
+                  <h2 class="modal-title"><%= t ".new_category" %></h2>
+                </div>
+                <div class="modal-body">
+                  <%= render "new" %>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -51,7 +51,7 @@ module Admin
     end
 
     def song_params
-      params.require(:song).permit :name, :avatar, :data, :album_id,
+      params.require(:song).permit :name, :avatar, :data, :listening, :album_id,
         :artist_id, :author_id, :category_id
     end
 
