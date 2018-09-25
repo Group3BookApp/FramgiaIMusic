@@ -1,20 +1,20 @@
 require "rails_helper"
-RSpec.describe Artist, :type => :model do
+RSpec.describe Album, :type => :model do
   describe "associations" do
     it {is_expected.to have_many :songs}
-    it {is_expected.to have_many :albums}
+    it {is_expected.to belong_to :artist}
   end
 
   describe "validation" do
     it "has a valid factory" do
-      artist = create :artist
-      expect(artist).to be_valid
+      album = create :album
+      expect(album).to be_valid
     end
 
     it {is_expected.to validate_presence_of :name}
     it {is_expected.to validate_length_of :name}
-    it {is_expected.to validate_presence_of :description}
     it {is_expected.to validate_length_of :description}
+    it {is_expected.to validate_presence_of :artist_id}
   end
 
   describe "db schema" do
