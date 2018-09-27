@@ -1,8 +1,8 @@
 class Song < ApplicationRecord
-  belongs_to :album
-  belongs_to :artist
-  belongs_to :author
-  belongs_to :category
+  belongs_to :album, optional: true
+  belongs_to :artist, optional: true
+  belongs_to :author, optional: true
+  belongs_to :category, optional: true
   scope :by_order, -> {order created_at: :desc}
   scope :select_song, -> {
     select :id, :avatar, :name, :data, :listening, :album_id,
