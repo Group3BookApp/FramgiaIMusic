@@ -2,7 +2,7 @@ require "ffaker"
 FactoryBot.define do
   factory :user, class: User do |f|
     f.name {FFaker::Name.name}
-    f.email {FFaker::Internet.email}
+    f.email {"admintest@gmail.com"}
     f.avatar {FFaker::Avatar.image}
     f.password {"111111"}
     f.password_confirmation {"111111"}

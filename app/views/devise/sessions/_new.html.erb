@@ -9,11 +9,11 @@
     <div id="loginpop">
       <%= link_to "#", id: "loginButton" do %>
         <span>
-          Login <i class="arrow glyphicon glyphicon-chevron-right"></i>
+          <%= t ".login" %> <i class="arrow glyphicon glyphicon-chevron-right"></i>
         </span>
       <% end %>
       <%= link_to "", data: {toggle: "modal", target: "#myModal5"}, class: "top-sign" do %>
-        <i class="fa fa-sign-in"></i>
+        <%= t ".sigup" %>
       <% end %>
       <div id="loginBox">
         <div id="loginForm">

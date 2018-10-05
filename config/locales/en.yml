@@ -347,6 +347,7 @@ en:
       new:
         forgot_password: "Forgot your password?"
         login: "Log in"
+        sigup: "Sign up"
     registrations:
       new:
         create_account: "CREATE ACCOUNT"
